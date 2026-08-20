@@ -1,31 +1,38 @@
+# Environment
+.env
+*.env
+.env.*
+!.env.example
+.venv/
+venv/
+
 # Python
 __pycache__/
 *.py[cod]
+*$py.class
+*.so
+*.egg-info/
+dist/
+build/
 
-# Virtual environment
-venv/
-.venv/
-env/
+# Data
+data/processed/
+vector_db/
 
-# Secrets
-.env
+# Logs
+logs/
 
 # IDE
 .vscode/
 .idea/
+*.swp
+*.swo
 
 # OS
 .DS_Store
 Thumbs.db
 
-# Jupyter
-.ipynb_checkpoints/
-
-# Project data
-data/raw/*
-data/processed/*
-data/evaluation/*
-vectorstore/*
-
-# Logs
-*.log
+# Node
+node_modules/
+frontend/dist/
+frontend/build/
