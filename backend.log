@@ -1,0 +1,198 @@
+INFO:     Started server process [3104]
+INFO:     Waiting for application startup.
+2026-08-20 11:55:37,280 [INFO] backend.app.main: Starting Diabetes RAG Backend...
+2026-08-20 11:55:37,612 [INFO] backend.app.retrieval.vector_store: Collection 'diabetes_rag': 58 documents
+2026-08-20 11:55:37,630 [INFO] backend.app.retrieval.hybrid_search: BM25 index loaded: 58 chunks
+2026-08-20 11:55:37,630 [INFO] backend.app.main: BM25 index loaded (350ms)
+2026-08-20 11:55:37,630 [INFO] backend.app.retrieval.embeddings: Loading embedding model: sentence-transformers/all-MiniLM-L6-v2
+2026-08-20 11:55:37,633 [INFO] sentence_transformers.base.model: No device provided, using cpu
+2026-08-20 11:55:39,140 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-08-20 11:55:39,141 [WARNING] huggingface_hub.utils._http: Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-08-20 11:55:39,315 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/modules.json "HTTP/1.1 200 OK"
+2026-08-20 11:55:39,731 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+2026-08-20 11:55:39,837 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config_sentence_transformers.json "HTTP/1.1 200 OK"
+2026-08-20 11:55:39,841 [INFO] sentence_transformers.base.model: Loading SentenceTransformer model from sentence-transformers/all-MiniLM-L6-v2.
+2026-08-20 11:55:40,041 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+2026-08-20 11:55:40,154 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config_sentence_transformers.json "HTTP/1.1 200 OK"
+2026-08-20 11:55:40,316 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-08-20 11:55:40,344 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/README.md "HTTP/1.1 200 OK"
+2026-08-20 11:55:40,499 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-08-20 11:55:40,526 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/modules.json "HTTP/1.1 200 OK"
+2026-08-20 11:55:40,692 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-08-20 11:55:40,726 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/sentence_bert_config.json "HTTP/1.1 200 OK"
+2026-08-20 11:55:40,982 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/adapter_config.json "HTTP/1.1 404 Not Found"
+2026-08-20 11:55:41,143 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-08-20 11:55:41,167 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config.json "HTTP/1.1 200 OK"
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|##########| 103/103 [00:00<00:00, 1980.03it/s]
+2026-08-20 11:55:41,683 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/processor_config.json "HTTP/1.1 404 Not Found"
+2026-08-20 11:55:41,847 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/preprocessor_config.json "HTTP/1.1 404 Not Found"
+2026-08-20 11:55:42,010 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/video_preprocessor_config.json "HTTP/1.1 404 Not Found"
+2026-08-20 11:55:42,208 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/preprocessor_config.json "HTTP/1.1 404 Not Found"
+2026-08-20 11:55:42,419 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-08-20 11:55:42,449 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/tokenizer_config.json "HTTP/1.1 200 OK"
+2026-08-20 11:55:42,627 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-08-20 11:55:42,713 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config.json "HTTP/1.1 200 OK"
+2026-08-20 11:55:42,946 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-08-20 11:55:43,071 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config.json "HTTP/1.1 200 OK"
+2026-08-20 11:55:43,234 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-08-20 11:55:43,293 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/tokenizer_config.json "HTTP/1.1 200 OK"
+2026-08-20 11:55:43,493 [INFO] httpx: HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-08-20 11:55:43,665 [INFO] httpx: HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-08-20 11:55:43,945 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/1_Pooling/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-08-20 11:55:44,021 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/1_Pooling%2Fconfig.json "HTTP/1.1 200 OK"
+2026-08-20 11:55:44,184 [INFO] httpx: HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2 "HTTP/1.1 200 OK"
+2026-08-20 11:55:44,191 [INFO] backend.app.retrieval.embeddings: Model loaded. Dimension: 384
+2026-08-20 11:55:44,191 [INFO] backend.app.main: Embedding model preloaded (6560ms)
+2026-08-20 11:55:44,191 [INFO] backend.app.main: ============================================================
+2026-08-20 11:55:44,191 [INFO] backend.app.main: STARTUP DIAGNOSTIC
+2026-08-20 11:55:44,191 [INFO] backend.app.main:   Embedding model:   sentence-transformers/all-MiniLM-L6-v2
+2026-08-20 11:55:44,191 [INFO] backend.app.main:   Reranker enabled:  False
+2026-08-20 11:55:44,191 [INFO] backend.app.main:   Index ready:       True
+2026-08-20 11:55:44,191 [INFO] backend.app.main:   LLM provider mode: auto
+2026-08-20 11:55:44,191 [INFO] backend.app.main:   LLM providers:     gemini \u2192 openrouter
+2026-08-20 11:55:44,191 [INFO] backend.app.main:     gemini: True
+2026-08-20 11:55:44,192 [INFO] backend.app.main:     openrouter: True
+2026-08-20 11:55:44,192 [INFO] backend.app.main:   Cold-start time:   6911ms
+2026-08-20 11:55:44,192 [INFO] backend.app.main: ============================================================
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+INFO:     127.0.0.1:64381 - "GET /health HTTP/1.1" 200 OK
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|##########| 1/1 [00:00<00:00, 17.22it/s]
+2026-08-20 11:58:00,874 [INFO] backend.app.generation.llm: [LLM] Provider chain: gemini \u2192 openrouter
+2026-08-20 11:58:00,874 [INFO] backend.app.generation.llm: [PROVIDER] Trying gemini...
+2026-08-20 11:58:09,368 [INFO] httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent?key=AQ.Ab8RN6Krm6nAbB0GyTiQNCP_oqGxQrdUQtc-scRZPDZrHsGWwA "HTTP/1.1 200 OK"
+2026-08-20 11:58:09,376 [INFO] backend.app.generation.providers: [PROVIDER] gemini OK: gemini-3.5-flash (8502ms, 5181 tokens)
+2026-08-20 11:58:09,377 [INFO] backend.app.generation.llm: [PROVIDER] gemini result: success (8.5s)
+INFO:     127.0.0.1:64892 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59973 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55728 - "GET /api/sources HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55728 - "OPTIONS /api/chat HTTP/1.1" 200 OK
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|##########| 1/1 [00:00<00:00, 26.73it/s]
+2026-08-20 12:01:13,029 [INFO] backend.app.generation.llm: [LLM] Provider chain: gemini \u2192 openrouter
+2026-08-20 12:01:13,029 [INFO] backend.app.generation.llm: [PROVIDER] Trying gemini...
+2026-08-20 12:01:22,595 [INFO] httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent?key=AQ.Ab8RN6Krm6nAbB0GyTiQNCP_oqGxQrdUQtc-scRZPDZrHsGWwA "HTTP/1.1 200 OK"
+2026-08-20 12:01:22,597 [INFO] backend.app.generation.providers: [PROVIDER] gemini OK: gemini-3.5-flash (9567ms, 5024 tokens)
+2026-08-20 12:01:22,597 [INFO] backend.app.generation.llm: [PROVIDER] gemini result: success (9.6s)
+INFO:     127.0.0.1:59973 - "POST /api/chat HTTP/1.1" 200 OK
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|##########| 1/1 [00:00<00:00, 28.41it/s]
+INFO:     127.0.0.1:59973 - "POST /api/chat HTTP/1.1" 200 OK
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|##########| 1/1 [00:00<00:00, 36.37it/s]
+INFO:     127.0.0.1:59973 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60494 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53098 - "GET /api/sources HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50441 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64954 - "GET /api/sources HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54841 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64591 - "GET /api/sources HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53649 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52108 - "GET /api/sources HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63198 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54577 - "GET /api/sources HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51163 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49720 - "GET /api/sources HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49720 - "OPTIONS /api/chat HTTP/1.1" 200 OK
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|##########| 1/1 [00:00<00:00, 46.49it/s]
+2026-08-20 12:02:27,133 [INFO] backend.app.generation.llm: [LLM] Provider chain: gemini \u2192 openrouter
+2026-08-20 12:02:27,134 [INFO] backend.app.generation.llm: [PROVIDER] Trying gemini...
+2026-08-20 12:02:35,198 [INFO] httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent?key=AQ.Ab8RN6Krm6nAbB0GyTiQNCP_oqGxQrdUQtc-scRZPDZrHsGWwA "HTTP/1.1 200 OK"
+2026-08-20 12:02:35,200 [INFO] backend.app.generation.providers: [PROVIDER] gemini OK: gemini-3.5-flash (8066ms, 4939 tokens)
+2026-08-20 12:02:35,200 [INFO] backend.app.generation.llm: [PROVIDER] gemini result: success (8.1s)
+INFO:     127.0.0.1:51163 - "POST /api/chat HTTP/1.1" 200 OK
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|##########| 1/1 [00:00<00:00, 44.33it/s]
+INFO:     127.0.0.1:51163 - "POST /api/chat HTTP/1.1" 200 OK
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|##########| 1/1 [00:00<00:00, 38.50it/s]
+INFO:     127.0.0.1:51163 - "POST /api/chat HTTP/1.1" 200 OK
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|##########| 1/1 [00:00<00:00, 27.79it/s]
+2026-08-20 12:02:41,722 [INFO] backend.app.generation.llm: [LLM] Provider chain: gemini \u2192 openrouter
+2026-08-20 12:02:41,723 [INFO] backend.app.generation.llm: [PROVIDER] Trying gemini...
+2026-08-20 12:02:51,280 [INFO] httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent?key=AQ.Ab8RN6Krm6nAbB0GyTiQNCP_oqGxQrdUQtc-scRZPDZrHsGWwA "HTTP/1.1 200 OK"
+2026-08-20 12:02:51,286 [INFO] backend.app.generation.providers: [PROVIDER] gemini OK: gemini-3.5-flash (9563ms, 5387 tokens)
+2026-08-20 12:02:51,286 [INFO] backend.app.generation.llm: [PROVIDER] gemini result: success (9.6s)
+INFO:     127.0.0.1:51163 - "POST /api/chat HTTP/1.1" 200 OK
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|##########| 1/1 [00:00<00:00, 35.09it/s]
+2026-08-20 12:03:50,862 [INFO] backend.app.generation.llm: [LLM] Provider chain: gemini \u2192 openrouter
+2026-08-20 12:03:50,862 [INFO] backend.app.generation.llm: [PROVIDER] Trying gemini...
+2026-08-20 12:03:56,443 [INFO] httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent?key=AQ.Ab8RN6Krm6nAbB0GyTiQNCP_oqGxQrdUQtc-scRZPDZrHsGWwA "HTTP/1.1 200 OK"
+2026-08-20 12:03:56,445 [INFO] backend.app.generation.providers: [PROVIDER] gemini OK: gemini-3.5-flash (5582ms, 4223 tokens)
+2026-08-20 12:03:56,445 [INFO] backend.app.generation.llm: [PROVIDER] gemini result: success (5.6s)
+2026-08-20 12:03:56,446 [WARNING] backend.app.generation.llm: Answer verification failed for 'What tests does the NIDDK recommend for diabetes screening?': ['No evidence was cited in the response']
+INFO:     127.0.0.1:57672 - "POST /api/chat HTTP/1.1" 200 OK
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|##########| 1/1 [00:00<00:00, 46.11it/s]
+2026-08-20 12:04:22,903 [INFO] backend.app.generation.llm: [LLM] Provider chain: gemini \u2192 openrouter
+2026-08-20 12:04:22,904 [INFO] backend.app.generation.llm: [PROVIDER] Trying gemini...
+2026-08-20 12:04:31,288 [INFO] httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent?key=AQ.Ab8RN6Krm6nAbB0GyTiQNCP_oqGxQrdUQtc-scRZPDZrHsGWwA "HTTP/1.1 200 OK"
+2026-08-20 12:04:31,290 [INFO] backend.app.generation.providers: [PROVIDER] gemini OK: gemini-3.5-flash (8386ms, 5139 tokens)
+2026-08-20 12:04:31,290 [INFO] backend.app.generation.llm: [PROVIDER] gemini result: success (8.4s)
+INFO:     127.0.0.1:56298 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52802 - "GET /api/sources HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64975 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63754 - "GET /api/sources HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63754 - "OPTIONS /api/chat HTTP/1.1" 200 OK
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|##########| 1/1 [00:00<00:00, 24.10it/s]
+2026-08-20 12:05:13,686 [INFO] backend.app.generation.llm: [LLM] Provider chain: gemini \u2192 openrouter
+2026-08-20 12:05:13,686 [INFO] backend.app.generation.llm: [PROVIDER] Trying gemini...
+2026-08-20 12:05:23,865 [INFO] httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent?key=AQ.Ab8RN6Krm6nAbB0GyTiQNCP_oqGxQrdUQtc-scRZPDZrHsGWwA "HTTP/1.1 200 OK"
+2026-08-20 12:05:23,867 [INFO] backend.app.generation.providers: [PROVIDER] gemini OK: gemini-3.5-flash (10181ms, 5326 tokens)
+2026-08-20 12:05:23,867 [INFO] backend.app.generation.llm: [PROVIDER] gemini result: success (10.2s)
+INFO:     127.0.0.1:64975 - "POST /api/chat HTTP/1.1" 200 OK
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|##########| 1/1 [00:00<00:00, 40.59it/s]
+INFO:     127.0.0.1:64975 - "POST /api/chat HTTP/1.1" 200 OK
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|##########| 1/1 [00:00<00:00, 38.84it/s]
+INFO:     127.0.0.1:64975 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57316 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62077 - "GET /api/sources HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51972 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58593 - "GET /api/sources HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53339 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64811 - "GET /api/sources HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64016 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56290 - "GET /api/sources HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52480 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61069 - "GET /api/sources HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64386 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60420 - "GET /api/sources HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60420 - "OPTIONS /api/chat HTTP/1.1" 200 OK
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|##########| 1/1 [00:00<00:00, 26.62it/s]
+INFO:     127.0.0.1:60420 - "POST /api/chat HTTP/1.1" 200 OK
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|##########| 1/1 [00:00<00:00, 35.76it/s]
+INFO:     127.0.0.1:60420 - "POST /api/chat HTTP/1.1" 200 OK
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|##########| 1/1 [00:00<00:00, 41.00it/s]
+2026-08-20 12:51:31,506 [INFO] backend.app.generation.llm: [LLM] Provider chain: gemini \u2192 openrouter
+2026-08-20 12:51:31,506 [INFO] backend.app.generation.llm: [PROVIDER] Trying gemini...
+2026-08-20 12:51:42,403 [INFO] httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent?key=AQ.Ab8RN6Krm6nAbB0GyTiQNCP_oqGxQrdUQtc-scRZPDZrHsGWwA "HTTP/1.1 200 OK"
+2026-08-20 12:51:42,405 [INFO] backend.app.generation.providers: [PROVIDER] gemini OK: gemini-3.5-flash (10899ms, 5326 tokens)
+2026-08-20 12:51:42,405 [INFO] backend.app.generation.llm: [PROVIDER] gemini result: success (10.9s)
+INFO:     127.0.0.1:57183 - "POST /api/chat HTTP/1.1" 200 OK
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|##########| 1/1 [00:00<00:00, 20.72it/s]
+2026-08-20 12:54:24,134 [INFO] backend.app.generation.llm: [LLM] Provider chain: gemini \u2192 openrouter
+2026-08-20 12:54:24,134 [INFO] backend.app.generation.llm: [PROVIDER] Trying gemini...
+2026-08-20 12:54:33,130 [INFO] httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent?key=AQ.Ab8RN6Krm6nAbB0GyTiQNCP_oqGxQrdUQtc-scRZPDZrHsGWwA "HTTP/1.1 200 OK"
+2026-08-20 12:54:33,132 [INFO] backend.app.generation.providers: [PROVIDER] gemini OK: gemini-3.5-flash (8998ms, 5151 tokens)
+2026-08-20 12:54:33,132 [INFO] backend.app.generation.llm: [PROVIDER] gemini result: success (9.0s)
+INFO:     127.0.0.1:56087 - "POST /api/chat HTTP/1.1" 200 OK
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|##########| 1/1 [00:00<00:00, 28.62it/s]
+INFO:     127.0.0.1:56087 - "POST /api/chat HTTP/1.1" 200 OK
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|##########| 1/1 [00:00<00:00, 26.23it/s]
+2026-08-20 12:54:55,568 [INFO] backend.app.generation.llm: [LLM] Provider chain: gemini \u2192 openrouter
+2026-08-20 12:54:55,568 [INFO] backend.app.generation.llm: [PROVIDER] Trying gemini...
+2026-08-20 12:55:03,849 [INFO] httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent?key=AQ.Ab8RN6Krm6nAbB0GyTiQNCP_oqGxQrdUQtc-scRZPDZrHsGWwA "HTTP/1.1 200 OK"
+2026-08-20 12:55:03,850 [INFO] backend.app.generation.providers: [PROVIDER] gemini OK: gemini-3.5-flash (8282ms, 5424 tokens)
+2026-08-20 12:55:03,850 [INFO] backend.app.generation.llm: [PROVIDER] gemini result: success (8.3s)
+INFO:     127.0.0.1:61038 - "POST /api/chat HTTP/1.1" 200 OK
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|##########| 1/1 [00:00<00:00, 46.63it/s]
+2026-08-20 12:55:06,416 [INFO] backend.app.generation.llm: [LLM] Provider chain: gemini \u2192 openrouter
+2026-08-20 12:55:06,416 [INFO] backend.app.generation.llm: [PROVIDER] Trying gemini...
+2026-08-20 12:55:15,552 [INFO] httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent?key=AQ.Ab8RN6Krm6nAbB0GyTiQNCP_oqGxQrdUQtc-scRZPDZrHsGWwA "HTTP/1.1 200 OK"
+2026-08-20 12:55:15,556 [INFO] backend.app.generation.providers: [PROVIDER] gemini OK: gemini-3.5-flash (9139ms, 5139 tokens)
+2026-08-20 12:55:15,556 [INFO] backend.app.generation.llm: [PROVIDER] gemini result: success (9.1s)
+INFO:     127.0.0.1:61038 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56989 - "GET /api/sources HTTP/1.1" 200 OK
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|##########| 1/1 [00:00<00:00, 11.69it/s]
+2026-08-20 12:55:20,602 [INFO] backend.app.generation.llm: [LLM] Provider chain: gemini \u2192 openrouter
+2026-08-20 12:55:20,602 [INFO] backend.app.generation.llm: [PROVIDER] Trying gemini...
+2026-08-20 12:55:29,660 [INFO] httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent?key=AQ.Ab8RN6Krm6nAbB0GyTiQNCP_oqGxQrdUQtc-scRZPDZrHsGWwA "HTTP/1.1 200 OK"
+2026-08-20 12:55:29,663 [INFO] backend.app.generation.providers: [PROVIDER] gemini OK: gemini-3.5-flash (9061ms, 5169 tokens)
+2026-08-20 12:55:29,663 [INFO] backend.app.generation.llm: [PROVIDER] gemini result: success (9.1s)
+2026-08-20 12:55:29,664 [WARNING] backend.app.generation.llm: Answer verification failed for 'How is gestational diabetes diagnosed?': ['No evidence was cited in the response']
+INFO:     127.0.0.1:56989 - "POST /api/chat HTTP/1.1" 200 OK

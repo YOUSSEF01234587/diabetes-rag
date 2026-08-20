@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clinical Evidence Copilot — Diabetes Edition | Pitch Deck</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        /* BASE SETUP & RESET */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #0f172a;
+            display: grid;
+            gap: 25px;
+            grid-template-columns: 1fr;
+            min-height: 100vh;
+            padding: 30px 0;
+            place-items: center;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        .slide-container {
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+            height: 720px;
+            justify-content: space-between;
+            overflow: hidden;
+            padding: 40px 50px;
+            position: relative;
+            width: 1280px;
+        }
+
+        /* BACKGROUND ABSTRACT MEDICAL PATTERN */
+        .slide-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(14, 165, 233, 0.08) 0%, rgba(255, 255, 255, 0) 70%);
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .slide-container > * {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* TYPOGRAPHY */
+        h1, h2, h3 {
+            color: #0f172a;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-weight: 700;
+        }
+
+        p, li {
+            color: #475569;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 15px;
+            line-height: 1.45;
+        }
+
+        .slide-title {
+            font-size: 30px;
+            color: #0f172a;
+            letter-spacing: -0.5px;
+            margin-bottom: 6px;
+        }
+
+        .slide-subtitle {
+            font-size: 13px;
+            color: #0284c7;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 2px;
+        }
+
+        .content-area {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            justify-content: center;
+            width: 100%;
+        }
+
+        /* SLIDE 1: TITLE */
+        .title-layout {
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .title-layout h1 {
+            font-size: 52px;
+            color: #0f172a;
+            margin-bottom: 12px;
+            letter-spacing: -1px;
+        }
+
+        .title-layout .subtitle {
+            font-size: 20px;
+            color: #0284c7;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .title-quote {
+            background-color: #f8fafc;
+            border-left: 4px solid #0284c7;
+            padding: 14px 22px;
+            border-radius: 0 8px 8px 0;
+            font-size: 16px;
+            color: #334155;
+            font-weight: 500;
+            max-width: 850px;
+        }
+
+        /* GRIDS & CARDS */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+
+        .grid-4 {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+        }
+
+        .card {
+            background-color: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .card.highlight {
+            background: #f0fdf4;
+            border-color: #86efac;
+            border-width: 2px;
+        }
+
+        /* METRICS BANNER */
+        .metrics-row {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .metric-box {
+            background: #f1f5f9;
+            border: 1px solid #cbd5e1;
+            border-radius: 8px;
+            padding: 12px;
+            text-align: center;
+        }
+
+        .metric-box .val {
+            font-size: 22px;
+            font-weight: 700;
+            color: #0284c7;
+        }
+
+        .metric-box .lbl {
+            font-size: 11px;
+            color: #64748b;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        /* ARCHITECTURE & PIPELINE */
+        .pipeline-flow {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            max-width: 950px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .pipe-row {
+            display: flex;
+            justify-content: space-between;
+            gap: 8px;
+        }
+
+        .pipe-node {
+            background: #f8fafc;
+            border: 1px solid #cbd5e1;
+            padding: 10px 12px;
+            border-radius: 6px;
+            text-align: center;
+            flex: 1;
+            font-weight: 600;
+            color: #1e293b;
+            font-size: 13px;
+        }
+
+        .pipe-node.highlight {
+            background: #0284c7;
+            color: white;
+            border-color: #0284c7;
+        }
+
+        .pipe-connector {
+            text-align: center;
+            color: #0284c7;
+            font-size: 12px;
+        }
+
+        .business-badge {
+            background: #e0f2fe;
+            color: #0369a1;
+            font-size: 10px;
+            font-weight: 700;
+            padding: 2px 6px;
+            border-radius: 4px;
+            display: inline-block;
+            text-transform: uppercase;
+            width: fit-content;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- SLIDE 1: THE VISION -->
+    <div class="slide-container" id="slide1">
+        <div class="title-layout">
+            <div class="slide-subtitle">Clinical Evidence Copilot Hackathon — August 2026</div>
+            <h1>Clinical Evidence Copilot</h1>
+            <div class="subtitle">Diabetes Edition</div>
+            <div class="title-quote">
+                "A Retrieval-Augmented Generation system for evidence-based diabetes care — grounded in authoritative clinical sources, built with safety-first design."
+            </div>
+        </div>
+    </div>
+
+    <!-- SLIDE 2: THE PROBLEM -->
+    <div class="slide-container" id="slide2">
+        <div class="slide-subtitle">The Problem</div>
+        <h2 class="slide-title">Clinical answers, buried in fragmented evidence</h2>
+        <div class="content-area">
+            <div class="grid-2" style="align-items: center;">
+                <div style="display: flex; flex-direction: column; gap: 10px;">
+                    <div class="card"><i class="fa-solid fa-triangle-exclamation" style="color: #e11d48;"></i> <strong>Guidelines span hundreds of pages:</strong> ADA Standards of Care runs 100+ pages — too dense to search manually under time pressure.</div>
+                    <div class="card"><i class="fa-solid fa-triangle-exclamation" style="color: #e11d48;"></i> <strong>Search lacks clinical grounding:</strong> Generic search results give no way to verify source provenance.</div>
+                    <div class="card"><i class="fa-solid fa-triangle-exclamation" style="color: #e11d48;"></i> <strong>LLMs hallucinate references:</strong> Generic models fabricate citations and mix outdated guidance with current standards.</div>
+                    <div class="card"><i class="fa-solid fa-triangle-exclamation" style="color: #e11d48;"></i> <strong>No safety boundaries:</strong> Nothing stops standard LLMs from generating unsafe or unverified medical advice.</div>
+                </div>
+                <div style="background: #f1f5f9; border-radius: 10px; padding: 25px; text-align: center; border: 1px solid #cbd5e1;">
+                    <div style="font-size: 16px; font-weight: 700; color: #0284c7; margin-bottom: 12px;">Core Challenge</div>
+                    <p style="font-size: 15px; color: #1e293b;">"There is no lightweight tool that retrieves, synthesizes, and cites authoritative diabetes evidence with verifiable provenance."</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SLIDE 3: OUR SOLUTION -->
+    <div class="slide-container" id="slide3">
+        <div class="slide-subtitle">Our Solution</div>
+        <h2 class="slide-title">A RAG system with safety baked into the pipeline</h2>
+        <div class="content-area">
+            <div class="grid-2" style="align-items: center;">
+                <div style="display: flex; flex-direction: column; gap: 12px;">
+                    <div class="card" style="background: #f0fdf4; border-color: #bbf7d0;"><i class="fa-solid fa-circle-check" style="color: #16a34a;"></i> <strong>Grounded Generation:</strong> Every answer traces back to specific chunks from ADA and NIDDK documents.</div>
+                    <div class="card" style="background: #f0fdf4; border-color: #bbf7d0;"><i class="fa-solid fa-circle-check" style="color: #16a34a;"></i> <strong>Safety-First Architecture:</strong> 8 refusal reasons, 5 post-generation verification checks, and regex risk detection.</div>
+                    <div class="card" style="background: #f0fdf4; border-color: #bbf7d0;"><i class="fa-solid fa-circle-check" style="color: #16a34a;"></i> <strong>Evidence Transparency:</strong> Per-statement citations, confidence scores, and an evidence drawer let clinicians verify claims.</div>
+                    <div class="card" style="background: #f0fdf4; border-color: #bbf7d0;"><i class="fa-solid fa-circle-check" style="color: #16a34a;"></i> <strong>Multi-Provider Failover:</strong> Automatic fallback across Gemini, Groq, and OpenRouter ensures uptime.</div>
+                </div>
+                <div style="background: linear-gradient(135deg, #0284c7, #0369a1); color: white; padding: 35px; border-radius: 12px; text-align: center; height: 100%; display: flex; flex-direction: column; justify-content: center;">
+                    <h3 style="color: white; font-size: 22px; margin-bottom: 10px;">Not Just an AI Answer</h3>
+                    <p style="color: #e0f2fe; font-size: 15px;">An evidence-grounded clinical response built for safety and complete provenance verification.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SLIDE 4: DATA SOURCES & INGESTION -->
+    <div class="slide-container" id="slide4">
+        <div class="slide-subtitle">Data Sources &amp; Ingestion</div>
+        <h2 class="slide-title">Two authoritative documents, 116 indexed chunks</h2>
+        <div class="content-area">
+            <div class="grid-2" style="margin-bottom: 15px;">
+                <div class="card">
+                    <h3><i class="fa-solid fa-file-pdf" style="color: #0284c7;"></i> ADA Standards of Care 2026</h3>
+                    <p style="font-size: 13px; color: #64748b;">American Diabetes Association · DOI 10.2337/dc26-S002</p>
+                    <p style="font-size: 14px;">23-page clinical guideline — the definitive annual standard for diabetes diagnosis and management.</p>
+                    <div style="font-weight: 700; color: #0284c7; font-size: 13px; margin-top: auto;">58 Chunks · 700 Token Size · 100 Overlap</div>
+                </div>
+                <div class="card">
+                    <h3><i class="fa-solid fa-file-pdf" style="color: #0284c7;"></i> NIDDK Diabetes &amp; Prediabetes Tests</h3>
+                    <p style="font-size: 13px; color: #64748b;">NIH / NIDDK · Public Domain Reference</p>
+                    <p style="font-size: 14px;">Authoritative 1-page patient-facing reference covering FPG, A1C, and OGTT diagnostic tests.</p>
+                    <div style="font-weight: 700; color: #0284c7; font-size: 13px; margin-top: auto;">58 Chunks · 300 Token Size · Curated</div>
+                </div>
+            </div>
+            <div class="metrics-row">
+                <div class="metric-box"><div class="val">2</div><div class="lbl">Source Documents</div></div>
+                <div class="metric-box"><div class="val">116</div><div class="lbl">Indexed Chunks</div></div>
+                <div class="metric-box"><div class="val">384-dim</div><div class="lbl">Dense Embeddings</div></div>
+                <div class="metric-box"><div class="val">ChromaDB</div><div class="lbl">Vector Store</div></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SLIDE 5: SYSTEM ARCHITECTURE -->
+    <div class="slide-container" id="slide5">
+        <div class="slide-subtitle">System Architecture</div>
+        <h2 class="slide-title">From browser query to grounded, cited answer</h2>
+        <div class="content-area">
+            <div class="pipeline-flow">
+                <div class="pipe-row">
+                    <div class="pipe-node">Browser Frontend (Vanilla JS)</div>
+                    <div class="pipe-node">FastAPI Backend API Gateway</div>
+                    <div class="pipe-node">Intent Classification</div>
+                </div>
+                <div class="pipe-connector"><i class="fa-solid fa-arrow-down"></i></div>
+                <div class="pipe-row">
+                    <div class="pipe-node highlight">Hybrid Retrieval (BM25 + Dense + RRF)</div>
+                    <div class="pipe-node highlight">Safety Layer (8 Refusals / 5 Checks)</div>
+                    <div class="pipe-node highlight">Multi-Provider LLM Chain</div>
+                </div>
+                <div class="pipe-connector"><i class="fa-solid fa-arrow-down"></i></div>
+                <div class="pipe-row">
+                    <div class="pipe-node" style="grid-column: span 3; background: #f1f5f9; border-color: #cbd5e1;">Response + Citations Rendered in Clinician Browser</div>
+                </div>
+            </div>
+            <div style="margin-top: 15px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; font-size: 13px; color: #475569; text-align: center;">
+                <div style="background: #f8fafc; padding: 8px; border-radius: 6px; border: 1px solid #e2e8f0;">Intent routing filters off-topic queries early</div>
+                <div style="background: #f8fafc; padding: 8px; border-radius: 6px; border: 1px solid #e2e8f0;">Strict pipeline rejects unsafe content before LLM call</div>
+                <div style="background: #f8fafc; padding: 8px; border-radius: 6px; border: 1px solid #e2e8f0;">Automatic failover across Gemini, Groq, OpenRouter</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SLIDE 6: RETRIEVAL ENGINE & PIPELINE -->
+    <div class="slide-container" id="slide6">
+        <div class="slide-subtitle">Retrieval Engine &amp; Pipeline</div>
+        <h2 class="slide-title">Hybrid retrieval combining lexical and semantic signals</h2>
+        <div class="content-area">
+            <div class="grid-2">
+                <div class="card">
+                    <h3><i class="fa-solid fa-magnifying-glass" style="color: #0284c7;"></i> Hybrid Mechanics</h3>
+                    <p><strong>BM25 Okapi:</strong> Exact keyword matching for clinical terminology (e.g., HbA1c, FPG).</p>
+                    <p><strong>Dense Embeddings:</strong> <code>all-MiniLM-L6-v2</code> (384-dim) for semantic similarity.</p>
+                    <p><strong>RRF Fusion:</strong> Combines scores with dense weight 0.6.</p>
+                    <p><strong>Parameters:</strong> Top-K = 8, similarity threshold = 0.35.</p>
+                </div>
+                <div class="card">
+                    <h3><i class="fa-solid fa-filter" style="color: #0284c7;"></i> Query Processing &amp; Intent</h3>
+                    <p><strong>Intent Classification:</strong> Rule-based routing categorizes queries (diagnosis, testing, treatment).</p>
+                    <p><strong>Query Expansion:</strong> Maps clinical abbreviations (A1C, FPG) to canonical terms.</p>
+                    <p><strong>Section Boosting:</strong> Prioritizes chunks from relevant guideline sections.</p>
+                    <p><strong>Latency:</strong> Sub-100ms end-to-end retrieval performance.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SLIDE 7: SAFETY & VERIFICATION LAYER -->
+    <div class="slide-container" id="slide7">
+        <div class="slide-subtitle">Safety &amp; Verification</div>
+        <h2 class="slide-title">Rigorous post-generation verification and safety guardrails</h2>
+        <div class="content-area">
+            <div class="grid-2">
+                <div class="card">
+                    <h3><i class="fa-solid fa-shield-halved" style="color: #0284c7;"></i> 8 Refusal Reasons</h3>
+                    <p style="font-size: 13.5px;">Catches unsafe queries before generation: <code>low_relevance</code>, <code>insufficient_evidence</code>, <code>provider_failure</code>, <code>medical_advice</code>, <code>emergency</code>, <code>verification_failed</code>, <code>no_safe_answer</code>, <code>technical_error</code>.</p>
+                </div>
+                <div class="card">
+                    <h3><i class="fa-solid fa-square-check" style="color: #0284c7;"></i> 5 Post-Generation Checks</h3>
+                    <p style="font-size: 13.5px;">Validates answers before delivery: Citation validity check, hallucination prevention, safety compliance, confidence alignment, and source consistency verification.</p>
+                </div>
+            </div>
+            <div style="margin-top: 15px; background: #f8fafc; border: 1px solid #e2e8f0; padding: 14px; border-radius: 8px; text-align: center; font-weight: 600; color: #1e293b; font-size: 14px;">
+                Multi-Provider Failover Chain: Gemini 2.0 Flash → Groq Llama 3.3 70B → OpenRouter GPT-OSS 20B
+            </div>
+        </div>
+    </div>
+
+    <!-- SLIDE 8: REAL RESULTS -->
+    <div class="slide-container" id="slide8">
+        <div class="slide-subtitle">Evaluation &amp; Results</div>
+        <h2 class="slide-title">Rigorous automated testing across QA &amp; API layers</h2>
+        <div class="content-area">
+            <div class="grid-4" style="margin-bottom: 15px;">
+                <div class="card highlight" style="text-align: center;">
+                    <div style="font-size: 11px; font-weight: 600; text-transform: uppercase; color: #64748b;">Recall@5</div>
+                    <div style="font-size: 28px; font-weight: 700; color: #16a34a;">1.0000</div>
+                    <div style="font-size: 12px; color: #475569;">100% Hit Rate</div>
+                </div>
+                <div class="card" style="text-align: center;">
+                    <div style="font-size: 11px; font-weight: 600; text-transform: uppercase; color: #64748b;">MRR</div>
+                    <div style="font-size: 28px; font-weight: 700; color: #0284c7;">0.8316</div>
+                    <div style="font-size: 12px; color: #475569;">High ranking accuracy</div>
+                </div>
+                <div class="card highlight" style="text-align: center;">
+                    <div style="font-size: 11px; font-weight: 600; text-transform: uppercase; color: #64748b;">Source Accuracy</div>
+                    <div style="font-size: 28px; font-weight: 700; color: #16a34a;">100%</div>
+                    <div style="font-size: 12px; color: #475569;">Correct attribution</div>
+                </div>
+                <div class="card highlight" style="text-align: center;">
+                    <div style="font-size: 11px; font-weight: 600; text-transform: uppercase; color: #64748b;">Visual QA</div>
+                    <div style="font-size: 28px; font-weight: 700; color: #16a34a;">169/169</div>
+                    <div style="font-size: 12px; color: #475569;">0 console errors</div>
+                </div>
+            </div>
+            <div style="background: #f8fafc; padding: 12px 18px; border-radius: 6px; text-align: center; font-weight: 600; color: #475569; border: 1px solid #e2e8f0; font-size: 13.5px;">
+                <strong>API Integration Scenarios (5/5 Passing):</strong> FPG query (Answered) ✓ · France query (Refused) ✓ · Metformin advice (Refused) ✓ · Emergency symptoms (Refused) ✓ · Prediabetes query (Answered) ✓
+            </div>
+        </div>
+    </div>
+
+    <!-- SLIDE 9: TRUST, TRANSPARENCY & FRONTEND -->
+    <div class="slide-container" id="slide9">
+        <div class="slide-subtitle">Trust &amp; Frontend UX</div>
+        <h2 class="slide-title">Built for clinician verification and complete provenance</h2>
+        <div class="content-area">
+            <div class="grid-2">
+                <div class="card">
+                    <h3><i class="fa-solid fa-list-check" style="color: #0284c7;"></i> Provenance &amp; Verification</h3>
+                    <p><strong>Evidence Drawer:</strong> Expandable panel showing retrieved chunks, source, section, and score.</p>
+                    <p><strong>Per-Statement Citations:</strong> Superscript links mapping claims to exact source text.</p>
+                    <p><strong>Grounding Scores:</strong> Confidence display reflecting evidence support strength.</p>
+                    <p><strong>Conflict Detection:</strong> Distinguishes clinical context from actual source disagreements.</p>
+                </div>
+                <div class="card">
+                    <h3><i class="fa-solid fa-code" style="color: #0284c7;"></i> Frontend Architecture</h3>
+                    <p><strong>Zero Build Step:</strong> Vanilla JavaScript ES6 modules with no framework overhead.</p>
+                    <p><strong>Responsive Design:</strong> Tested across 6 viewports (375px to 1440px) with 0 overflow.</p>
+                    <p><strong>LaTeX Rendering:</strong> Correct math notation for A1C thresholds and calculations.</p>
+                    <p><strong>Persistence:</strong> LocalStorage session history (up to 50 conversations).</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SLIDE 10: THE TEAM -->
+    <div class="slide-container" id="slide10">
+        <div class="slide-subtitle">The Team</div>
+        <h2 class="slide-title">The team behind Clinical Evidence Copilot</h2>
+        <div class="content-area">
+            <div class="grid-3">
+                <div class="card highlight">
+                    <div style="font-size: 17px; font-weight: 700; color: #0f172a;">Youssef Talaat</div>
+                    <div style="font-size: 13px; color: #16a34a; font-weight: 600;">Project Lead &amp; AI Engineer</div>
+                    <p style="font-size: 13px; color: #475569; margin-top: 4px;">Core RAG architecture, hybrid retrieval pipeline, safety verification, and evaluation framework.</p>
+                </div>
+                <div class="card">
+                    <div style="font-size: 17px; font-weight: 700; color: #0f172a;">Sayed Elkelany</div>
+                    <div style="font-size: 13px; color: #0284c7; font-weight: 600;">Front End &amp; Backend Engineer</div>
+                    <p style="font-size: 13px; color: #64748b; margin-top: 4px;">Frontend integration, FastAPI backend services, APIs, and multi-provider LLM chain.</p>
+                </div>
+                <div class="card">
+                    <div style="font-size: 17px; font-weight: 700; color: #0f172a;">Abd Elrahman Hamdy</div>
+                    <div style="font-size: 13px; color: #0284c7; font-weight: 600;">Data &amp; Ingestion Engineer</div>
+                    <p style="font-size: 13px; color: #64748b; margin-top: 4px;">PDF extraction, section detection, metadata mapping, and vector store ingestion pipeline.</p>
+                </div>
+                <div class="card">
+                    <div style="font-size: 17px; font-weight: 700; color: #0f172a;">Ahmed Mugahed</div>
+                    <div style="font-size: 13px; color: #0284c7; font-weight: 600;">Retrieval &amp; Search Engineer</div>
+                    <p style="font-size: 13px; color: #64748b; margin-top: 4px;">Hybrid retrieval pipeline, search ranking, query processing, and evidence retrieval.</p>
+                </div>
+                <div class="card">
+                    <div style="font-size: 17px; font-weight: 700; color: #0f172a;">Mohamed Tarek</div>
+                    <div style="font-size: 13px; color: #0284c7; font-weight: 600;">Evaluation &amp; QA Specialist</div>
+                    <p style="font-size: 13px; color: #64748b; margin-top: 4px;">Automated benchmark evaluation, Playwright visual QA testing across viewports.</p>
+                </div>
+                <div class="card" style="background: #f1f5f9; border-style: dashed;">
+                    <div style="font-size: 15px; font-weight: 700; color: #64748b;">Hackathon Edition</div>
+                    <div style="font-size: 13px; color: #64748b; font-weight: 600;">August 2026</div>
+                    <p style="font-size: 12px; color: #64748b; margin-top: 4px;">Built for production-grade reliability and clinical transparency.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SLIDE 11: TECHNICAL ROADMAP -->
+    <div class="slide-container" id="slide11">
+        <div class="slide-subtitle">Technical Roadmap</div>
+        <h2 class="slide-title">Scaling clinical intelligence and expanding corpus</h2>
+        <div class="content-area">
+            <div class="grid-3">
+                <div class="card">
+                    <div style="font-size: 15px; font-weight: 700; color: #0284c7; border-bottom: 2px solid #0284c7; padding-bottom: 4px; margin-bottom: 6px;">Phase 1: Now (MVP)</div>
+                    <span class="business-badge">Product Validation</span>
+                    <ul style="list-style-type: disc; padding-left: 16px; display: flex; flex-direction: column; gap: 4px; margin-top: 6px;">
+                        <li style="font-size: 13px;">Evidence-grounded diabetes assistant</li>
+                        <li style="font-size: 13px;">Robust hybrid retrieval pipeline</li>
+                        <li style="font-size: 13px;">Baseline clinical evaluation suite</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <div style="font-size: 15px; font-weight: 700; color: #0284c7; border-bottom: 2px solid #0284c7; padding-bottom: 4px; margin-bottom: 6px;">Phase 2: Next (Growth)</div>
+                    <span class="business-badge">Expansion</span>
+                    <ul style="list-style-type: disc; padding-left: 16px; display: flex; flex-direction: column; gap: 4px; margin-top: 6px;">
+                        <li style="font-size: 13px;">Multi-disease coverage (Cardio, Oncology)</li>
+                        <li style="font-size: 13px;">Cross-encoder reranker integration</li>
+                        <li style="font-size: 13px;">Multilingual support &amp; localization</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <div style="font-size: 15px; font-weight: 700; color: #0284c7; border-bottom: 2px solid #0284c7; padding-bottom: 4px; margin-bottom: 6px;">Phase 3: Future (Scale)</div>
+                    <span class="business-badge">Ecosystem</span>
+                    <ul style="list-style-type: disc; padding-left: 16px; display: flex; flex-direction: column; gap: 4px; margin-top: 6px;">
+                        <li style="font-size: 13px;">Multimodal medical data (Imaging &amp; Labs)</li>
+                        <li style="font-size: 13px;">Continuous live guideline syncing</li>
+                        <li style="font-size: 13px;">Advanced clinician feedback loops</li>
+                    </ul>
+                </div>
+            </div>
+            <div style="text-align: center; font-weight: 700; color: #0284c7; font-size: 14px; margin-top: 10px;">
+                "From searching medical evidence to understanding it — responsibly and scaleable."
+            </div>
+        </div>
+    </div>
+
+    <!-- SLIDE 12: BUSINESS VALUE & MONETIZATION -->
+    <div class="slide-container" id="slide12">
+        <div class="slide-subtitle">Commercial Strategy</div>
+        <h2 class="slide-title">Monetizing trustworthy AI for healthcare enterprises</h2>
+        <div class="content-area">
+            <div class="grid-3">
+                <div class="card" style="background: #f0fdf4; border-color: #86efac;">
+                    <div style="font-size: 15px; font-weight: 700; color: #16a34a; border-bottom: 2px solid #16a34a; padding-bottom: 4px; margin-bottom: 6px;">B2B SaaS Subscription</div>
+                    <span class="business-badge" style="background: #dcfce7; color: #166534;">Tiered Hospital Pricing</span>
+                    <ul style="list-style-type: disc; padding-left: 16px; display: flex; flex-direction: column; gap: 4px; margin-top: 6px;">
+                        <li style="font-size: 13px;">Per-seat licensing for clinicians &amp; residents ($49/mo)</li>
+                        <li style="font-size: 13px;">Departmental &amp; hospital-wide annual contracts</li>
+                        <li style="font-size: 13px;">Reduces literature review time by 75%</li>
+                    </ul>
+                </div>
+                <div class="card" style="background: #eff6ff; border-color: #bfdbfe;">
+                    <div style="font-size: 15px; font-weight: 700; color: #1d4ed8; border-bottom: 2px solid #1d4ed8; padding-bottom: 4px; margin-bottom: 6px;">Enterprise API Licensing</div>
+                    <span class="business-badge" style="background: #dbeafe; color: #1e40af;">EHR / EMR Integration</span>
+                    <ul style="list-style-type: disc; padding-left: 16px; display: flex; flex-direction: column; gap: 4px; margin-top: 6px;">
+                        <li style="font-size: 13px;">Direct embedding into Epic and Cerner workflows</li>
+                        <li style="font-size: 13px;">Secure HIPAA-compliant VPC deployment</li>
+                        <li style="font-size: 13px;">Enterprise contracts ($50k–$250k/year)</li>
+                    </ul>
+                </div>
+                <div class="card" style="background: #fdf4ff; border-color: #f5d0fe;">
+                    <div style="font-size: 15px; font-weight: 700; color: #a21caf; border-bottom: 2px solid #a21caf; padding-bottom: 4px; margin-bottom: 6px;">Pharma &amp; Research Insights</div>
+                    <span class="business-badge" style="background: #fae8ff; color: #86198f;">Analytics &amp; Trials</span>
+                    <ul style="list-style-type: disc; padding-left: 16px; display: flex; flex-direction: column; gap: 4px; margin-top: 6px;">
+                        <li style="font-size: 13px;">Aggregated query trend analytics for pharma</li>
+                        <li style="font-size: 13px;">Clinical trial protocol matching &amp; evidence synthesis</li>
+                        <li style="font-size: 13px;">High-margin data intelligence partnerships</li>
+                    </ul>
+                </div>
+            </div>
+            <div style="text-align: center; font-weight: 700; color: #0284c7; font-size: 14px; margin-top: 10px;">
+                "Translating cutting-edge retrieval technology into a scalable, high-value clinical intelligence business."
+            </div>
+        </div>
+    </div>
+
+    <!-- SLIDE 13: CONFIGURATION & SYSTEM SPECS -->
+    <div class="slide-container" id="slide13">
+        <div class="slide-subtitle">System Configuration</div>
+        <h2 class="slide-title">Production configuration and technical reference</h2>
+        <div class="content-area">
+            <div class="grid-2">
+                <div class="card">
+                    <h3><i class="fa-solid fa-gear" style="color: #0284c7;"></i> Core Parameters</h3>
+                    <p><strong>Embedding Model:</strong> <code>sentence-transformers/all-MiniLM-L6-v2</code></p>
+                    <p><strong>Chunk Size:</strong> 700 tokens (ADA) / 300 tokens (NIDDK)</p>
+                    <p><strong>Overlap:</strong> 100 tokens (ADA) / 0 tokens (NIDDK)</p>
+                    <p><strong>Retrieval Top-K:</strong> 8 chunks with similarity threshold 0.35</p>
+                </div>
+                <div class="card">
+                    <h3><i class="fa-solid fa-cloud" style="color: #0284c7;"></i> API &amp; LLM Stack</h3>
+                    <p><strong>Primary LLM:</strong> Google Gemini 2.0 Flash</p>
+                    <p><strong>Secondary LLM:</strong> Groq Llama 3.3 70B Versatile</p>
+                    <p><strong>Tertiary LLM:</strong> OpenRouter GPT-OSS 20B</p>
+                    <p><strong>Provider Timeout:</strong> 30.0 seconds with automatic failover</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SLIDE 14: CONCLUSION -->
+    <div class="slide-container" id="slide14">
+        <div class="title-layout">
+            <div class="slide-subtitle">Clinical Evidence Copilot — August 2026 Edition</div>
+            <h1>Thank You</h1>
+            <div class="subtitle" style="font-size: 20px; margin-bottom: 15px;">Trustworthy AI. Grounded Evidence. Scalable Business.</div>
+            <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 15px;">
+                <div class="card" style="padding: 8px 16px; font-weight: 600; font-size: 13.5px;">Youssef Talaat (Lead &amp; AI)</div>
+                <div class="card" style="padding: 8px 16px; font-weight: 600; font-size: 13.5px;">Sayed Elkelany (Front End &amp; Backend)</div>
+                <div class="card" style="padding: 8px 16px; font-weight: 600; font-size: 13.5px;">Abd Elrahman Hamdy (Data)</div>
+                <div class="card" style="padding: 8px 16px; font-weight: 600; font-size: 13.5px;">Ahmed Mugahed (Retrieval &amp; Search)</div>
+                <div class="card" style="padding: 8px 16px; font-weight: 600; font-size: 13.5px;">Mohamed Tarek (QA)</div>
+            </div>
+            <p style="margin-top: 20px; font-size: 13.5px; color: #64748b;">Built for the Clinical Evidence Copilot Hackathon · August 2026</p>
+        </div>
+    </div>
+
+</body>
+</html>

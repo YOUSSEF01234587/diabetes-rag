@@ -1,0 +1,2734 @@
+[
+  {
+    "id": "V3-001",
+    "question": "What A1C level is considered diabetes?",
+    "category": "diagnostic_criteria",
+    "answerable": true,
+    "expected_sources": [
+      "ada_soc_2026_diagnosis"
+    ],
+    "expected_sections": [
+      "Screening and Diagnosis of Diabetes"
+    ],
+    "expected_pages": [
+      2
+    ],
+    "required_concepts": [
+      "A1C",
+      "6.5%",
+      "48 mmol/mol"
+    ],
+    "difficulty": "easy",
+    "intent": "diagnostic_criteria",
+    "notes": "Table 2.1: A1C >=6.5% (>=48 mmol/mol)"
+  },
+  {
+    "id": "V3-002",
+    "question": "What is the fasting plasma glucose threshold for diagnosing diabetes?",
+    "category": "diagnostic_criteria",
+    "answerable": true,
+    "expected_sources": [
+      "ada_soc_2026_diagnosis"
+    ],
+    "expected_sections": [
+      "Screening and Diagnosis of Diabetes"
+    ],
+    "expected_pages": [
+      2
+    ],
+    "required_concepts": [
+      "FPG",
+      "126 mg/dL",
+      "7.0 mmol/L"
+    ],
+    "difficulty": "easy",
+    "intent": "diagnostic_criteria",
+    "notes": "Table 2.1: FPG >=126 mg/dL (>=7.0 mmol/L)"
+  },
+  {
+    "id": "V3-003",
+    "question": "What is the 2-hour OGTT threshold for diabetes?",
+    "category": "diagnostic_criteria",
+    "answerable": true,
+    "expected_sources": [
+      "ada_soc_2026_diagnosis"
+    ],
+    "expected_sections": [
+      "Screening and Diagnosis of Diabetes"
+    ],
+    "expected_pages": [
+      2
+    ],
+    "required_concepts": [
+      "OGTT",
+      "200 mg/dL",
+      "11.1 mmol/L"
+    ],
+    "difficulty": "easy",
+    "intent": "diagnostic_criteria",
+    "notes": "Table 2.1: 2-h PG >=200 mg/dL (>=11.1 mmol/L)"
+  },
+  {
+    "id": "V3-004",
+    "question": "What random plasma glucose level indicates diabetes?",
+    "category": "diagnostic_criteria",
+    "answerable": true,
+    "expected_sources": [
+      "ada_soc_2026_diagnosis"
+    ],
+    "expected_sections": [
+      "Screening and Diagnosis of Diabetes"
+    ],
+    "expected_pages": [
+      2
+    ],
+    "required_concepts": [
+      "random PG",
+      "200 mg/dL",
+      "symptoms"
+    ],
+    "difficulty": "easy",
+    "intent": "diagnostic_criteria",
+    "notes": "Table 2.1: random PG >=200 mg/dL with classic symptoms"
+  },
+  {
+    "id": "V3-005",
+    "question": "What tests can be used to diagnose diabetes?",
+    "category": "diagnostic_criteria",
+    "answerable": true,
+    "expected_sources": [
+      "ada_soc_2026_diagnosis"
+    ],
+    "expected_sections": [
+      "Screening and Diagnosis of Diabetes"
+    ],
+    "expected_pages": [
+      2
+    ],
+    "required_concepts": [
+      "A1C",
+      "FPG",
+      "OGTT",
+      "random PG"
+    ],
+    "difficulty": "easy",
+    "intent": "diagnostic_criteria",
+    "notes": "Table 2.1 lists all four diagnostic tests"
+  },
+  {
+    "id": "V3-006",
+    "question": "Can CGM be used to diagnose diabetes?",
+    "category": "diagnostic_criteria",
+    "answerable": true,
+    "expected_sources": [
+      "ada_soc_2026_diagnosis"
+    ],
+    "expected_sections": [
+      "Screening and Diagnosis of Diabetes"
+    ],
+    "expected_pages": [
+      2
+    ],
+    "required_concepts": [
+      "CGM",
+      "insufficient evidence",
+      "not recommended"
+    ],
+    "difficulty": "medium",
+    "intent": "diagnostic_criteria",
+    "notes": "p2: insufficient evidence for CGM screening/diagnosis"
+  },
+  {
+    "id": "V3-007",
+    "question": "What are the diagnostic criteria for prediabetes?",
+    "category": "prediabetes",
+    "answerable": true,
+    "expected_sources": [
+      "ada_soc_2026_diagnosis"
+    ],
+    "expected_sections": [
+      "Diagnosis of Prediabetes"
+    ],
+    "expected_pages": [
+      2,
+      10
+    ],
+    "required_concepts": [
+      "IFG",
+      "IGT",
+      "A1C 5.7-6.4%"
+    ],
+    "difficulty": "medium",
+    "intent": "prediabetes_criteria",
+    "notes": "Multiple criteria across p2 and p10"
+  },
+  {
+    "id": "V3-008",
+    "question": "What is the fasting glucose range for prediabetes?",
+    "category": "prediabetes",
+    "answerable": true,
+    "expected_sources": [
+      "ada_soc_2026_diagnosis"
+    ],
+    "expected_sections": [
+      "Diagnosis of Prediabetes"
+    ],
+    "expected_pages": [
+      10
+    ],
+    "required_concepts": [
+      "IFG",
+      "100-125 mg/dL",
+      "5.6-6.9 mmol/L"
+    ],
+    "difficulty": "easy",
+    "intent": "prediabetes_criteria",
+    "notes": "p10: IFG defined as FPG 100-125 mg/dL (5.6-6.9 mmol/L)"
+  },
+  {
+    "id": "V3-009",
+    "question": "What A1C range indicates prediabetes?",
+    "category": "prediabetes",
+    "answerable": true,
+    "expected_sources": [
+      "ada_soc_2026_diagnosis"
+    ],
+    "expected_sections": [
+      "Diagnosis of Prediabetes"
+    ],
+    "expected_pages": [
+      10
+    ],
+    "required_concepts": [
+      "A1C",
+      "5.7-6.4%",
+      "39-47 mmol/mol"
+    ],
+    "difficulty": "easy",
+    "intent": "prediabetes_criteria",
+    "notes": "p10: A1C 5.7-6.4% (39-47 mmol/mol)"
+  },
+  {
+    "id": "V3-010",
+    "question": "What is the OGTT threshold for prediabetes?",
+    "category": "prediabetes",
+    "answerable": true,
+    "expected_sources": [
+      "ada_soc_2026_diagnosis"
+    ],
+    "expected_sections": [
+      "Diagnosis of Prediabetes"
+    ],
+    "expected_pages": [
+      10
+    ],
+    "required_concepts": [
+      "IGT",
+      "140-199 mg/dL",
+      "7.8-11.0 mmol/L"
+    ],
+    "difficulty": "easy",
+    "intent": "prediabetes_criteria",
+    "notes": "p10: IGT = 2-h PG 140-199 mg/dL (7.8-11.0 mmol/L)"
+  },
+  {
+    "id": "V3-011",
+    "question": "What is the difference between impaired fasting glucose and impaired glucose tolerance?",
+    "category": "prediabetes",
+    "answerable": true,
+    "expected_sources": [
+      "ada_soc_2026_diagnosis"
+    ],
+    "expected_sections": [
+      "Diagnosis of Prediabetes"
+    ],
+    "expected_pages": [
+      10
+    ],
+    "required_concepts": [
+      "IFG",
+      "IGT",
+      "fasting vs 2-hour",
+      "different tests"
+    ],
+    "difficulty": "medium",
+    "intent": "prediabetes_criteria",
+    "notes": "IFG = fasting test 100-125; IGT = 2-hour test 140-199"
+  },
+  {
+    "id": "V3-012",
+    "question": "What are the advantages of A1C over FPG and OGTT?",
+    "category": "a1c",
+    "answerable": true,
+    "expected_sources": [
+      "ada_soc_2026_diagnosis"
+    ],
+    "expected_sections": [
+      "Screening and Diagnosis of Diabetes"
+    ],
+    "expected_pages": [
+      3
+    ],
+    "required_concepts": [
+      "convenience",
+      "no fasting",
+      "stability",
+      "perturbations"
+    ],
+    "difficulty": "medium",
+    "intent": "a1c",
+    "notes": "p3: convenience (no fasting), preanalytical stability, fewer day-to-day perturbations"
+  },
+  {
+    "id": "V3-013",
+    "question": "What conditions interfere with A1C testing?",
+    "category": "a1c",
+    "answerable": true,
+    "expected_sources": [
+      "ada_soc_2026_diagnosis"
+    ],
+    "expected_sections": [
+      "Screening and Diagnosis of Diabetes"
+    ],
+    "expected_pages": [
+      3,
+      4
+    ],
+    "required_concepts": [
+      "hemoglobin variants",
+      "G6PD",
+      "pregnancy",
+      "RBC turnover"
+    ],
+    "difficulty": "medium",
+    "intent": "test_interference",
+    "notes": "p3-4: hemoglobin variants, G6PD deficiency, pregnancy, altered RBC turnover, etc."
+  },
+  {
+    "id": "V3-014",
+    "question": "How should A1C be used for diagnosis in the US?",
+    "category": "a1c",
+    "answerable": true,
+    "expected_sources": [
+      "ada_soc_2026_diagnosis"
+    ],
+    "expected_sections": [
+      "Screening and Diagnosis of Diabetes"
+    ],
+    "expected_pages": [
+      2,
+      3
+    ],
+    "required_concepts": [
+      "NGSP",
+      "DCCT",
+      "certified lab",
+      "POC restrictions"
+    ],
+    "difficulty": "medium",
+    "intent": "a1c",
+    "notes": "p2-3: NGSP certified, standardized to DCCT, POC testing restrictions"
+  },
+  {
+    "id": "V3-015",
+    "question": "What are the A1C advantages over glucose-based tests?",
+    "category": "a1c",
+    "answerable": true,
+    "expected_sources": [
+      "ada_soc_2026_diagnosis"
+    ],
+    "expected_sections": [
+      "Screening and Diagnosis of Diabetes"
+    ],
+    "expected_pages": [
+      3
+    ],
+    "required_concepts": [
+      "convenience",
+      "no fasting",
+      "stability",
+      "perturbations"
+    ],
+    "difficulty": "easy",
+    "intent": "a1c",
+    "notes": "p3: convenience, preanalytical stability, fewer day-to-day perturbations"
+  },
+  {
+    "id": "V3-016",
+    "question": "What affects A1C results according to the ADA standards?",
+    "category": "a1c",
+    "answerable": true,
+    "expected_sources": [
+      "ada_soc_2026_diagnosis"
+    ],
+    "expected_sections": [
+      "Screening and Diagnosis of Diabetes"
+    ],
+    "expected_pages": [
+      3,
+      4
+    ],
+    "required_concepts": [
+      "hemoglobin variants",
+      "erythropoietin",
+      "iron deficiency",
+      "kidney disease"
+    ],
+    "difficulty": "hard",
+    "intent": "test_interference",
+    "notes": "p3-4: multiple interfering conditions listed in Table 2.3"
+  },
+  {
+    "id": "V3-017",
+    "question": "What is the recommended frequency for A1C testing in diabetes monitoring?",
+    "category": "a1c",
+    "answerable": true,
+    "expected_sources": [
+      "ada_soc_2026_diagnosis"
+    ],
+    "expected_sections": [
+      "Screening and Diagnosis of Diabetes"
+    ],
+    "expected_pages": [
+      3
+    ],
+    "required_concepts": [
+      "monitoring",
+      "quarterly",
+      "every 3 months"
+    ],
+    "difficulty": "medium",
+    "intent": "a1c",
+    "notes": "p3: A1C reflects 2-3 month glucose exposure; at least twice yearly"
+  },
+  {
+    "id": "V3-018",
+    "question": "What does fasting mean for the FPG test?",
+    "category": "fpg",
+    "answerable": true,
+    "expected_sources": [
+      "ada_soc_2026_diagnosis"
+    ],
+    "expected_sections": [
+      "Screening and Diagnosis of Diabetes"
+    ],
+    "expected_pages": [
+      2
+    ],
+    "required_concepts": [
+      "no caloric intake",
+      "8 hours"
+    ],
+    "difficulty": "easy",
+    "intent": "fpg",
+    "notes": "p2 Table 2.1 footnote: no caloric intake for at least 8 h"
+  },
+  {
+    "id": "V3-019",
+    "question": "What is the coefficient of variation for the FPG test?",
+    "category": "fpg",
+    "answerable": true,
+    "expected_sources": [
+      "niddk_diabetes_prediabetes_tests"
+    ],
+    "expected_sections": [
+      "Comparing Diabetes Blood Tests"
+    ],
+    "expected_pages": [
+      1
+    ],
+    "required_concepts": [
+      "5.7%",
+      "biological variation",
+      "110-142 mg/dL"
+    ],
+    "difficulty": "hard",
+    "intent": "fpg",
+    "notes": "NIDDK: CV of 5.7%, result of 126 could indicate true FPG of 110-142"
+  },
+  {
+    "id": "V3-020",
+    "question": "What is the sensitivity of the FPG test compared to A1C?",
+    "category": "fpg",
+    "answerable": true,
+    "expected_sources": [
+      "niddk_diabetes_prediabetes_tests"
+    ],
+    "expected_sections": [
+      "Comparing Diabetes Blood Tests"
+    ],
+    "expected_pages": [
+      1
+    ],
+    "required_concepts": [
+      "FPG sensitivity",
+      "greater than A1C"
+    ],
+    "difficulty": "medium",
+    "intent": "test_comparison",
+    "notes": "NIDDK: FPG sensitivity greater than A1C test"
+  },
+  {
+    "id": "V3-021",
+    "question": "What is sample stability for the FPG test?",
+    "category": "fpg",
+    "answerable": true,
+    "expected_sources": [
+      "niddk_diabetes_prediabetes_tests"
+    ],
+    "expected_sections": [
+      "Comparing Diabetes Blood Tests"
+    ],
+    "expected_pages": [
+      1
+    ],
+    "required_concepts": [
+      "low stability",
+      "30 minutes",
+      "sodium fluoride"
+    ],
+    "difficulty": "medium",
+    "intent": "fpg",
+    "notes": "NIDDK: low sample stability, requires processing within 30 minutes"
+  },
+  {
+    "id": "V3-022",
+    "question": "What is the 2-h glucose load for the OGTT?",
+    "category": "ogtt",
+    "answerable": true,
+    "expected_sources": [
+      "ada_soc_2026_diagnosis"
+    ],
+    "expected_sections": [
+      "Screening and Diagnosis of Diabetes"
+    ],
+    "expected_pages": [
+      2
+    ],
+    "required_concepts": [
+      "75 grams",
+      "anhydrous glucose",
+      "WHO protocol"
+    ],
+    "difficulty": "easy",
+    "intent": "ogtt",
+    "notes": "p2 Table 2.1: 75 g anhydrous glucose dissolved in water per WHO"
+  },
+  {
+    "id": "V3-023",
+    "question": "What patient preparation is required before an OGTT?",
+    "category": "ogtt",
+    "answerable": true,
+    "expected_sources": [
+      "niddk_diabetes_prediabetes_tests"
+    ],
+    "expected_sections": [
+      "Comparing Diabetes Blood Tests"
+    ],
+    "expected_pages": [
+      1
+    ],
+    "required_concepts": [
+      "carbohydrate intake",
+      "150 g/day",
+      "3 days",
+      "8-hour fast"
+    ],
+    "difficulty": "medium",
+    "intent": "ogtt",
+    "notes": "NIDDK: at least 150 g/day carbs for 3 days before test, 8-hour fast"
+  },
+  {
+    "id": "V3-024",
+    "question": "How many samples are needed for an OGTT?",
+    "category": "ogtt",
+    "answerable": true,
+    "expected_sources": [
+      "niddk_diabetes_prediabetes_tests"
+    ],
+    "expected_sections": [
+      "Comparing Diabetes Blood Tests"
+    ],
+    "expected_pages": [
+      1
+    ],
+    "required_concepts": [
+      "two samples",
+      "fasting",
+      "2 hours"
+    ],
+    "difficulty": "medium",
+    "intent": "ogtt",
+    "notes": "NIDDK: two samples after 8-hour fast and 2 hours after glucose load"
+  },
+  {
+    "id": "V3-025",
+    "question": "When is random plasma glucose used for diabetes diagnosis?",
+    "category": "random_pg",
+    "answerable": true,
+    "expected_sources": [
+      "ada_soc_2026_diagnosis"
+    ],
+    "expected_sections": [
+      "Screening and Diagnosis of Diabetes"
+    ],
+    "expected_pages": [
+      2
+    ],
+    "required_concepts": [
+      "symptoms",
+      "hyperglycemia",
+      "crisis",
+      "polyuria",
+      "polydipsia"
+    ],
+    "difficulty": "easy",
+    "intent": "random_glucose",
+    "notes": "p2: only with classic symptoms of hyperglycemia or hyperglycemic crisis"
+  },
+  {
+    "id": "V3-026",
+    "question": "How should a diabetes diagnosis be confirmed?",
+    "category": "confirmation",
+    "answerable": true,
+    "expected_sources": [
+      "ada_soc_2026_diagnosis"
+    ],
+    "expected_sections": [
+      "Confirming the Diagnosis"
+    ],
+    "expected_pages": [
+      4
+    ],
+    "required_concepts": [
+      "two abnormal results",
+      "different tests",
+      "same test different time"
+    ],
+    "difficulty": "hard",
+    "intent": "diagnosis_confirmation",
+    "notes": "p4: two abnormal results from different tests or same test at different time points"
+  },
+  {
+    "id": "V3-027",
+    "question": "What confirmatory tests are recommended after an initial diabetes diagnosis?",
+    "category": "confirmation",
+    "answerable": true,
+    "expected_sources": [
+      "ada_soc_2026_diagnosis"
+    ],
+    "expected_sections": [
+      "Confirming the Diagnosis"
+    ],
+    "expected_pages": [
+      4
+    ],
+    "required_concepts": [
+      "repeat A1C",
+      "OGTT",
+      "confirmatory"
+    ],
+    "difficulty": "hard",
+    "intent": "diagnosis_confirmation",
+    "notes": "p4: preferably repeat A1C or OGTT"
+  },
+  {
+    "id": "V3-028",
+    "question": "Can a diabetes diagnosis be made with a single test?",
+    "category": "confirmation",
+    "answerable": true,
+    "expected_sources": [
+      "ada_soc_2026_diagnosis"
+    ],
+    "expected_sections": [
+      "Confirming the Diagnosis"
+    ],
+    "expected_pages": [
+      4
+    ],
+    "required_concepts": [
+      "except RPG",
+      "hyperglycemic crisis",
+      "confirm needed"
+    ],
+    "difficulty": "medium",
+    "intent": "diagnosis_confirmation",
+    "notes": "p4: diagnosis requires confirmation except in symptomatic hyperglycemia"
+  },
+  {
+    "id": "V3-029",
+    "question": "How often should people at risk be screened for diabetes?",
+    "category": "screening",
+    "answerable": true,
+    "expected_sources": [
+      "ada_soc_2026_diagnosis"
+    ],
+    "expected_sections": [
+      "Screening and Testing for Prediabetes and Type 2 Diabetes in Asymptomatic Adults"
+    ],
+    "expected_pages": [
+      11,
+      12
+    ],
+    "required_concepts": [
+      "every 3 years",
+      "risk factors"
+    ],
+    "difficulty": "medium",
+    "intent": "screening",
+    "notes": "p11-12: screening every 3 years for adults at risk"
+  },
+  {
+    "id": "V3-030",
+    "question": "What are the risk factors for type 2 diabetes?",
+    "category": "screening",
+    "answerable": true,
+    "expected_sources": [
+      "ada_soc_2026_diagnosis"
+    ],
+    "expected_sections": [
+      "Screening and Testing for Prediabetes and Type 2 Diabetes in Asymptomatic Adults"
+    ],
+    "expected_pages": [
+      11
+    ],
+    "required_concepts": [
+      "age",
+      "obesity",
+      "inactivity",
+      "prediabetes",
+      "GDM",
+      "PCOS",
+      "hypertension"
+    ],
+    "difficulty": "medium",
+    "intent": "screening",
+    "notes": "p11: age, obesity, physical inactivity, prediabetes, prior GDM, PCOS, hypertension"
+  },
+  {
+    "id": "V3-031",
+    "question": "When should screening for type 2 diabetes begin in children?",
+    "category": "screening",
+    "answerable": true,
+    "expected_sources": [
+      "ada_soc_2026_diagnosis"
+    ],
+    "expected_sections": [
+      "Screening and Testing for Prediabetes and Type 2 Diabetes in Asymptomatic Adults"
+    ],
+    "expected_pages": [
+      10
+    ],
+    "required_concepts": [
+      "after puberty",
+      "age 10",
+      "overweight",
+      "risk factors"
+    ],
+    "difficulty": "hard",
+    "intent": "screening",
+    "notes": "p10 Table 2.6: after puberty or age 10, with overweight/obesity and risk factors"
+  },
+  {
+    "id": "V3-032",
+    "question": "What are the stages of type 1 diabetes?",
+    "category": "type1",
+    "answerable": true,
+    "expected_sources": [
+      "ada_soc_2026_diagnosis"
+    ],
+    "expected_sections": [
+      "Type 1 Diabetes"
+    ],
+    "expected_pages": [
+      6,
+      7
+    ],
+    "required_concepts": [
+      "Stage 1",
+      "Stage 2",
+      "Stage 3",
+      "autoimmunity",
+      "dysglycemia"
+    ],
+    "difficulty": "medium",
+    "intent": "type1",
+    "notes": "p6-7: Stage 1 autoimmunity normoglycemia, Stage 2 dysglycemia, Stage 3 clinical"
+  },
+  {
+    "id": "V3-033",
+    "question": "What autoantibodies indicate type 1 diabetes risk?",
+    "category": "type1",
+    "answerable": true,
+    "expected_sources": [
+      "ada_soc_2026_diagnosis"
+    ],
+    "expected_sections": [
+      "Type 1 Diabetes"
+    ],
+    "expected_pages": [
+      7
+    ],
+    "required_concepts": [
+      "IAA",
+      "GADA",
+      "IA-2A",
+      "ZnT8A",
+      "ICA"
+    ],
+    "difficulty": "hard",
+    "intent": "type1",
+    "notes": "p7: IAA, GADA, IA-2A, ZnT8A, ICA"
+  },
+  {
+    "id": "V3-034",
+    "question": "How is risk stratified for progression to type 1 diabetes?",
+    "category": "type1",
+    "answerable": true,
+    "expected_sources": [
+      "ada_soc_2026_diagnosis"
+    ],
+    "expected_sections": [
+      "Type 1 Diabetes"
+    ],
+    "expected_pages": [
+      7,
+      8
+    ],
+    "required_concepts": [
+      "number of autoantibodies",
+      "age",
+      "metabolic staging"
+    ],
+    "difficulty": "hard",
+    "intent": "type1",
+    "notes": "p7-8: risk increases with number of autoantibodies and metabolic changes"
+  },
+  {
+    "id": "V3-035",
+    "question": "What are the characteristics of type 2 diabetes?",
+    "category": "type2",
+    "answerable": true,
+    "expected_sources": [
+      "ada_soc_2026_diagnosis"
+    ],
+    "expected_sections": [
+      "Diagnosis of Prediabetes"
+    ],
+    "expected_pages": [
+      10
+    ],
+    "required_concepts": [
+      "insulin resistance",
+      "beta cell dysfunction",
+      "relative deficiency"
+    ],
+    "difficulty": "medium",
+    "intent": "type2",
+    "notes": "p10: characterized by insulin resistance and relative insulin deficiency"
+  },
+  {
+    "id": "V3-036",
+    "question": "What conditions are associated with increased type 2 diabetes risk?",
+    "category": "type2",
+    "answerable": true,
+    "expected_sources": [
+      "ada_soc_2026_diagnosis"
+    ],
+    "expected_sections": [
+      "Screening and Testing for Prediabetes and Type 2 Diabetes in Asymptomatic Adults"
+    ],
+    "expected_pages": [
+      11
+    ],
+    "required_concepts": [
+      "obesity",
+      "PCOS",
+      "prediabetes",
+      "hypertension",
+      "dyslipidemia"
+    ],
+    "difficulty": "medium",
+    "intent": "screening",
+    "notes": "p11: multiple risk factors including obesity, PCOS, hypertension"
+  },
+  {
+    "id": "V3-037",
+    "question": "How is gestational diabetes diagnosed?",
+    "category": "gestational",
+    "answerable": true,
+    "expected_sources": [
+      "ada_soc_2026_diagnosis"
+    ],
+    "expected_sections": [
+      "Gestational Diabetes Mellitus"
+    ],
+    "expected_pages": [
+      16,
+      17
+    ],
+    "required_concepts": [
+      "75-g OGTT",
+      "24-28 weeks",
+      "IADPSG",
+      "two-step"
+    ],
+    "difficulty": "medium",
+    "intent": "gestational",
+    "notes": "p16-17: 75-g OGTT at 24-28 weeks, IADPSG thresholds or two-step approach"
+  },
+  {
+    "id": "V3-038",
+    "question": "What are the risk factors for gestational diabetes?",
+    "category": "gestational",
+    "answerable": true,
+    "expected_sources": [
+      "ada_soc_2026_diagnosis"
+    ],
+    "expected_sections": [
+      "Gestational Diabetes Mellitus"
+    ],
+    "expected_pages": [
+      16
+    ],
+    "required_concepts": [
+      "overweight",
+      "obesity",
+      "family history",
+      "prior GDM"
+    ],
+    "difficulty": "medium",
+    "intent": "gestational",
+    "notes": "p16: references Table 2.5 for risk factors"
+  },
+  {
+    "id": "V3-039",
+    "question": "What glucose thresholds are used for GDM in the one-step approach?",
+    "category": "gestational",
+    "answerable": true,
+    "expected_sources": [
+      "ada_soc_2026_diagnosis"
+    ],
+    "expected_sections": [
+      "Gestational Diabetes Mellitus"
+    ],
+    "expected_pages": [
+      16,
+      17
+    ],
+    "required_concepts": [
+      "fasting 92",
+      "1-h 180",
+      "2-h 153",
+      "IADPSG"
+    ],
+    "difficulty": "hard",
+    "intent": "gestational",
+    "notes": "p17: fasting >=92, 1-h >=180, 2-h >=153 mg/dL (IADPSG)"
+  },
+  {
+    "id": "V3-040",
+    "question": "What are the monogenic diabetes syndromes?",
+    "category": "monogenic",
+    "answerable": true,
+    "expected_sources": [
+      "ada_soc_2026_diagnosis"
+    ],
+    "expected_sections": [
+      "Monogenic Diabetes Syndromes"
+    ],
+    "expected_pages": [
+      15,
+      16
+    ],
+    "required_concepts": [
+      "MODY",
+      "HNF1A",
+      "GCK",
+      "HNF4A",
+      "neonatal"
+    ],
+    "difficulty": "medium",
+    "intent": "monogenic",
+    "notes": "p15-16: MODY (HNF1A, GCK, HNF4A), neonatal diabetes"
+  },
+  {
+    "id": "V3-041",
+    "question": "How is MODY different from type 1 and type 2 diabetes?",
+    "category": "monogenic",
+    "answerable": true,
+    "expected_sources": [
+      "ada_soc_2026_diagnosis"
+    ],
+    "expected_sections": [
+      "Monogenic Diabetes Syndromes"
+    ],
+    "expected_pages": [
+      15,
+      16
+    ],
+    "required_concepts": [
+      "monogenic",
+      "autosomal dominant",
+      "single gene",
+      "incorrect diagnosis"
+    ],
+    "difficulty": "hard",
+    "intent": "monogenic",
+    "notes": "p15: monogenic forms often misdiagnosed as type 1 or type 2"
+  },
+  {
+    "id": "V3-042",
+    "question": "How is cystic fibrosis-related diabetes diagnosed?",
+    "category": "special_populations",
+    "answerable": true,
+    "expected_sources": [
+      "ada_soc_2026_diagnosis"
+    ],
+    "expected_sections": [
+      "Diagnosis of Prediabetes"
+    ],
+    "expected_pages": [
+      13,
+      14
+    ],
+    "required_concepts": [
+      "A1C >=6.5%",
+      "OGTT",
+      "within 3 months"
+    ],
+    "difficulty": "hard",
+    "intent": "special_population",
+    "notes": "p13-14: A1C >=6.5% or OGTT within 3 months"
+  },
+  {
+    "id": "V3-043",
+    "question": "What screening recommendations exist for diabetes in cystic fibrosis?",
+    "category": "special_populations",
+    "answerable": true,
+    "expected_sources": [
+      "ada_soc_2026_diagnosis"
+    ],
+    "expected_sections": [
+      "Diagnosis of Prediabetes"
+    ],
+    "expected_pages": [
+      13,
+      14
+    ],
+    "required_concepts": [
+      "annual OGTT",
+      "CFRD"
+    ],
+    "difficulty": "hard",
+    "intent": "special_population",
+    "notes": "p13-14: annual OGTT screening recommended"
+  },
+  {
+    "id": "V3-044",
+    "question": "Which hemoglobin variants affect A1C testing?",
+    "category": "a1c_interference",
+    "answerable": true,
+    "expected_sources": [
+      "ada_soc_2026_diagnosis"
+    ],
+    "expected_sections": [
+      "Screening and Diagnosis of Diabetes"
+    ],
+    "expected_pages": [
+      3
+    ],
+    "required_concepts": [
+      "HbC",
+      "HbS",
+      "HbE",
+      "HbD",
+      "African",
+      "Mediterranean"
+    ],
+    "difficulty": "hard",
+    "intent": "test_interference",
+    "notes": "p3: HbC, HbS, HbE, HbD traits; affects people of African, Mediterranean, SE Asian heritage"
+  },
+  {
+    "id": "V3-045",
+    "question": "In which populations should alternative tests to A1C be considered?",
+    "category": "a1c_interference",
+    "answerable": true,
+    "expected_sources": [
+      "ada_soc_2026_diagnosis"
+    ],
+    "expected_sections": [
+      "Screening and Diagnosis of Diabetes"
+    ],
+    "expected_pages": [
+      3,
+      4
+    ],
+    "required_concepts": [
+      "sickle cell",
+      "hemoglobin variants",
+      "African American"
+    ],
+    "difficulty": "hard",
+    "intent": "test_interference",
+    "notes": "p3-4: populations with hemoglobin variants, sickle cell trait"
+  },
+  {
+    "id": "V3-046",
+    "question": "What are the pros and cons of the FPG test?",
+    "category": "test_comparison",
+    "answerable": true,
+    "expected_sources": [
+      "niddk_diabetes_prediabetes_tests"
+    ],
+    "expected_sections": [
+      "Comparing Diabetes Blood Tests"
+    ],
+    "expected_pages": [
+      1
+    ],
+    "required_concepts": [
+      "low cost",
+      "automated",
+      "fasting required",
+      "diurnal variation"
+    ],
+    "difficulty": "medium",
+    "intent": "test_comparison",
+    "notes": "NIDDK: pros - low cost, automated; cons - fasting required, diurnal variation"
+  },
+  {
+    "id": "V3-047",
+    "question": "What are the pros and cons of the OGTT test?",
+    "category": "test_comparison",
+    "answerable": true,
+    "expected_sources": [
+      "niddk_diabetes_prediabetes_tests"
+    ],
+    "expected_sections": [
+      "Comparing Diabetes Blood Tests"
+    ],
+    "expected_pages": [
+      1
+    ],
+    "required_concepts": [
+      "sensitive",
+      "early marker",
+      "not convenient",
+      "expensive"
+    ],
+    "difficulty": "medium",
+    "intent": "test_comparison",
+    "notes": "NIDDK: pros - sensitive, early marker; cons - inconvenient, expensive"
+  },
+  {
+    "id": "V3-048",
+    "question": "What are the pros and cons of the A1C test?",
+    "category": "test_comparison",
+    "answerable": true,
+    "expected_sources": [
+      "niddk_diabetes_prediabetes_tests"
+    ],
+    "expected_sections": [
+      "Comparing Diabetes Blood Tests"
+    ],
+    "expected_pages": [
+      1
+    ],
+    "required_concepts": [
+      "no fasting",
+      "standardization",
+      "insensitive",
+      "cost"
+    ],
+    "difficulty": "medium",
+    "intent": "test_comparison",
+    "notes": "NIDDK: pros - no fasting, established standardization; cons - insensitive, higher cost"
+  },
+  {
+    "id": "V3-049",
+    "question": "What are the differences between FPG, A1C, and OGTT tests?",
+    "category": "test_comparison",
+    "answerable": true,
+    "expected_sources": [
+      "niddk_diabetes_prediabetes_tests"
+    ],
+    "expected_sections": [
+      "Comparing Diabetes Blood Tests"
+    ],
+    "expected_pages": [
+      1
+    ],
+    "required_concepts": [
+      "comparison",
+      "sensitivity",
+      "convenience",
+      "cost"
+    ],
+    "difficulty": "hard",
+    "intent": "test_comparison",
+    "notes": "NIDDK: complete comparison table of all three tests"
+  },
+  {
+    "id": "V3-050",
+    "question": "How does the sensitivity of A1C compare to FPG and OGTT?",
+    "category": "test_comparison",
+    "answerable": true,
+    "expected_sources": [
+      "niddk_diabetes_prediabetes_tests"
+    ],
+    "expected_sections": [
+      "Comparing Diabetes Blood Tests"
+    ],
+    "expected_pages": [
+      1
+    ],
+    "required_concepts": [
+      "FPG > A1C",
+      "OGTT > FPG",
+      "sensitivity ranking"
+    ],
+    "difficulty": "medium",
+    "intent": "test_comparison",
+    "notes": "NIDDK: FPG sensitivity > A1C; OGTT sensitivity > FPG"
+  },
+  {
+    "id": "V3-051",
+    "question": "What is the sensitivity of the FPG test compared to A1C?",
+    "category": "test_comparison",
+    "answerable": true,
+    "expected_sources": [
+      "niddk_diabetes_prediabetes_tests"
+    ],
+    "expected_sections": [
+      "Comparing Diabetes Blood Tests"
+    ],
+    "expected_pages": [
+      1
+    ],
+    "required_concepts": [
+      "FPG sensitivity",
+      "greater than A1C"
+    ],
+    "difficulty": "easy",
+    "intent": "test_comparison",
+    "notes": "NIDDK: FPG sensitivity greater than A1C test"
+  },
+  {
+    "id": "V3-052",
+    "question": "What does Table 2.1 in the ADA standards specify?",
+    "category": "table_retrieval",
+    "answerable": true,
+    "expected_sources": [
+      "ada_soc_2026_diagnosis"
+    ],
+    "expected_sections": [
+      "Screening and Diagnosis of Diabetes"
+    ],
+    "expected_pages": [
+      2
+    ],
+    "required_concepts": [
+      "Table 2.1",
+      "diagnostic criteria",
+      "nonpregnant"
+    ],
+    "difficulty": "medium",
+    "intent": "table_lookup",
+    "notes": "p2: Table 2.1 - Criteria for diagnosis in nonpregnant individuals"
+  },
+  {
+    "id": "V3-053",
+    "question": "What does Table 2.2 in the ADA standards specify?",
+    "category": "table_retrieval",
+    "answerable": true,
+    "expected_sources": [
+      "ada_soc_2026_diagnosis"
+    ],
+    "expected_sections": [
+      "Diagnosis of Prediabetes"
+    ],
+    "expected_pages": [
+      2
+    ],
+    "required_concepts": [
+      "Table 2.2",
+      "prediabetes criteria",
+      "nonpregnant"
+    ],
+    "difficulty": "medium",
+    "intent": "table_lookup",
+    "notes": "p2: Table 2.2 - Criteria defining prediabetes in nonpregnant individuals"
+  },
+  {
+    "id": "V3-054",
+    "question": "What is the complete diagnostic threshold table for diabetes?",
+    "category": "table_retrieval",
+    "answerable": true,
+    "expected_sources": [
+      "ada_soc_2026_diagnosis"
+    ],
+    "expected_sections": [
+      "Screening and Diagnosis of Diabetes"
+    ],
+    "expected_pages": [
+      2
+    ],
+    "required_concepts": [
+      "Table 2.1",
+      "all tests",
+      "A1C",
+      "FPG",
+      "OGTT",
+      "random PG"
+    ],
+    "difficulty": "hard",
+    "intent": "table_lookup",
+    "notes": "p2: Table 2.1 with all four tests and their thresholds"
+  },
+  {
+    "id": "V3-055",
+    "question": "What are all the diagnostic tests for diabetes and their thresholds?",
+    "category": "multi_part",
+    "answerable": true,
+    "expected_sources": [
+      "ada_soc_2026_diagnosis"
+    ],
+    "expected_sections": [
+      "Screening and Diagnosis of Diabetes"
+    ],
+    "expected_pages": [
+      2
+    ],
+    "required_concepts": [
+      "A1C 6.5%",
+      "FPG 126",
+      "OGTT 200",
+      "random PG 200"
+    ],
+    "difficulty": "medium",
+    "intent": "diagnostic_criteria",
+    "notes": "p2 Table 2.1: all four tests with thresholds"
+  },
+  {
+    "id": "V3-056",
+    "question": "What tests are used for prediabetes screening and what are their cutoff values?",
+    "category": "multi_part",
+    "answerable": true,
+    "expected_sources": [
+      "ada_soc_2026_diagnosis"
+    ],
+    "expected_sections": [
+      "Diagnosis of Prediabetes"
+    ],
+    "expected_pages": [
+      10
+    ],
+    "required_concepts": [
+      "A1C 5.7-6.4%",
+      "FPG 100-125",
+      "2-h PG 140-199"
+    ],
+    "difficulty": "medium",
+    "intent": "prediabetes_criteria",
+    "notes": "p10: three tests with prediabetes cutoffs"
+  },
+  {
+    "id": "V3-057",
+    "question": "What is the difference between how diabetes is diagnosed and how it is confirmed?",
+    "category": "multi_hop",
+    "answerable": true,
+    "expected_sources": [
+      "ada_soc_2026_diagnosis"
+    ],
+    "expected_sections": [
+      "Screening and Diagnosis of Diabetes",
+      "Confirming the Diagnosis"
+    ],
+    "expected_pages": [
+      2,
+      4
+    ],
+    "required_concepts": [
+      "diagnostic test",
+      "confirmation",
+      "two abnormal results"
+    ],
+    "difficulty": "hard",
+    "intent": "diagnosis_confirmation",
+    "notes": "Requires p2 (diagnostic criteria) and p4 (confirmation process)"
+  },
+  {
+    "id": "V3-058",
+    "question": "How do the diagnostic criteria for diabetes differ from those for prediabetes?",
+    "category": "multi_hop",
+    "answerable": true,
+    "expected_sources": [
+      "ada_soc_2026_diagnosis"
+    ],
+    "expected_sections": [
+      "Screening and Diagnosis of Diabetes",
+      "Diagnosis of Prediabetes"
+    ],
+    "expected_pages": [
+      2,
+      10
+    ],
+    "required_concepts": [
+      "higher thresholds",
+      "diabetes vs prediabetes",
+      "comparison"
+    ],
+    "difficulty": "hard",
+    "intent": "diagnostic_criteria",
+    "notes": "Requires comparing Table 2.1 (diabetes) with Table 2.2/p10 (prediabetes)"
+  },
+  {
+    "id": "V3-059",
+    "question": "What screening approach should be used for someone with risk factors for both type 2 diabetes and gestational diabetes?",
+    "category": "multi_hop",
+    "answerable": true,
+    "expected_sources": [
+      "ada_soc_2026_diagnosis"
+    ],
+    "expected_sections": [
+      "Screening and Testing for Prediabetes and Type 2 Diabetes in Asymptomatic Adults",
+      "Gestational Diabetes Mellitus"
+    ],
+    "expected_pages": [
+      11,
+      16
+    ],
+    "required_concepts": [
+      "screening intervals",
+      "risk factors",
+      "GDM screening"
+    ],
+    "difficulty": "hard",
+    "intent": "screening",
+    "notes": "Requires combining general screening (p11) with GDM-specific screening (p16)"
+  },
+  {
+    "id": "V3-060",
+    "question": "What is the normal blood sugar range?",
+    "category": "ambiguous",
+    "answerable": true,
+    "expected_sources": [
+      "ada_soc_2026_diagnosis",
+      "niddk_diabetes_prediabetes_tests"
+    ],
+    "expected_sections": [
+      "Screening and Diagnosis of Diabetes",
+      "Diagnosis of Prediabetes"
+    ],
+    "expected_pages": [
+      2,
+      10
+    ],
+    "required_concepts": [
+      "normal range",
+      "prediabetes range",
+      "diabetes range",
+      "context"
+    ],
+    "difficulty": "hard",
+    "intent": "diagnostic_criteria",
+    "notes": "Ambiguous: could mean normal, prediabetic, or diabetic ranges"
+  },
+  {
+    "id": "V3-061",
+    "question": "When should I get tested for diabetes?",
+    "category": "ambiguous",
+    "answerable": true,
+    "expected_sources": [
+      "ada_soc_2026_diagnosis"
+    ],
+    "expected_sections": [
+      "Screening and Testing for Prediabetes and Type 2 Diabetes in Asymptomatic Adults"
+    ],
+    "expected_pages": [
+      11
+    ],
+    "required_concepts": [
+      "screening criteria",
+      "risk factors",
+      "asymptomatic adults"
+    ],
+    "difficulty": "medium",
+    "intent": "screening",
+    "notes": "Ambiguous: depends on individual risk factors"
+  },
+  {
+    "id": "V3-062",
+    "question": "What is the best cancer treatment for lung cancer?",
+    "category": "unsupported",
+    "answerable": false,
+    "expected_sources": [],
+    "expected_sections": [],
+    "expected_pages": [],
+    "required_concepts": [],
+    "difficulty": "easy",
+    "intent": "unsupported",
+    "notes": "Out of scope for diabetes documents"
+  },
+  {
+    "id": "V3-063",
+    "question": "How does exercise affect insulin resistance?",
+    "category": "unsupported",
+    "answerable": false,
+    "expected_sources": [],
+    "expected_sections": [],
+    "expected_pages": [],
+    "required_concepts": [],
+    "difficulty": "easy",
+    "intent": "unsupported",
+    "notes": "Not covered in these two documents"
+  },
+  {
+    "id": "V3-064",
+    "question": "What is the recommended daily carbohydrate intake?",
+    "category": "unsupported",
+    "answerable": false,
+    "expected_sources": [],
+    "expected_sections": [],
+    "expected_pages": [],
+    "required_concepts": [],
+    "difficulty": "easy",
+    "intent": "unsupported",
+    "notes": "Not covered in diagnosis/classification documents"
+  },
+  {
+    "id": "V3-065",
+    "question": "What medication should I take for diabetes?",
+    "category": "unsupported",
+    "answerable": false,
+    "expected_sources": [],
+    "expected_sections": [],
+    "expected_pages": [],
+    "required_concepts": [],
+    "difficulty": "easy",
+    "intent": "unsupported",
+    "notes": "Medication is out of scope for diagnosis documents"
+  },
+  {
+    "id": "V3-066",
+    "question": "How does metformin work in the body?",
+    "category": "unsupported",
+    "answerable": false,
+    "expected_sources": [],
+    "expected_sections": [],
+    "expected_pages": [],
+    "required_concepts": [],
+    "difficulty": "easy",
+    "intent": "unsupported",
+    "notes": "Pharmacology not covered in diagnosis documents"
+  },
+  {
+    "id": "V3-067",
+    "question": "My A1C is 6.7. Do I have diabetes?",
+    "category": "personal_advice",
+    "answerable": false,
+    "expected_sources": [],
+    "expected_sections": [],
+    "expected_pages": [],
+    "required_concepts": [],
+    "difficulty": "medium",
+    "intent": "unsupported",
+    "notes": "Requires clinical judgment, not a retrieval question"
+  },
+  {
+    "id": "V3-068",
+    "question": "I have a fasting glucose of 110. Is that normal?",
+    "category": "personal_advice",
+    "answerable": false,
+    "expected_sources": [],
+    "expected_sections": [],
+    "expected_pages": [],
+    "required_concepts": [],
+    "difficulty": "medium",
+    "intent": "unsupported",
+    "notes": "Requires clinical interpretation, not a retrieval question"
+  },
+  {
+    "id": "V3-069",
+    "question": "What is the FPG threshold for gestational diabetes?",
+    "category": "adversarial",
+    "answerable": true,
+    "expected_sources": [
+      "ada_soc_2026_diagnosis"
+    ],
+    "expected_sections": [
+      "Gestational Diabetes Mellitus"
+    ],
+    "expected_pages": [
+      16,
+      17
+    ],
+    "required_concepts": [
+      "gestational",
+      "FPG",
+      "glucose threshold"
+    ],
+    "difficulty": "hard",
+    "intent": "gestational",
+    "notes": "Tests whether general FPG threshold (126) is confused with gestational thresholds"
+  },
+  {
+    "id": "V3-070",
+    "question": "What autoantibodies are used to diagnose type 2 diabetes?",
+    "category": "adversarial",
+    "answerable": false,
+    "expected_sources": [],
+    "expected_sections": [],
+    "expected_pages": [],
+    "required_concepts": [],
+    "difficulty": "hard",
+    "intent": "unsupported",
+    "notes": "Type 2 diabetes is not diagnosed with autoantibodies; this is a type 1 concept"
+  },
+  {
+    "id": "V3-071",
+    "question": "What is the OGTT threshold for confirming type 1 diabetes?",
+    "category": "adversarial",
+    "answerable": true,
+    "expected_sources": [
+      "ada_soc_2026_diagnosis"
+    ],
+    "expected_sections": [
+      "Type 1 Diabetes"
+    ],
+    "expected_pages": [
+      6,
+      7
+    ],
+    "required_concepts": [
+      "type 1",
+      "OGTT",
+      "autoantibodies",
+      "staging"
+    ],
+    "difficulty": "hard",
+    "intent": "type1",
+    "notes": "Tests whether general OGTT threshold is confused with type 1 staging criteria"
+  },
+  {
+    "id": "V3-072",
+    "question": "What is the difference between prediabetes diagnosis and type 1 diabetes staging?",
+    "category": "section_confusion",
+    "answerable": true,
+    "expected_sources": [
+      "ada_soc_2026_diagnosis"
+    ],
+    "expected_sections": [
+      "Diagnosis of Prediabetes",
+      "Type 1 Diabetes"
+    ],
+    "expected_pages": [
+      10,
+      6
+    ],
+    "required_concepts": [
+      "prediabetes criteria",
+      "type 1 staging",
+      "autoimmunity vs metabolic"
+    ],
+    "difficulty": "hard",
+    "intent": "diagnostic_criteria",
+    "notes": "Tests whether prediabetes section is confused with type 1 section"
+  },
+  {
+    "id": "V3-073",
+    "question": "How does the confirmation of diabetes diagnosis relate to the screening process?",
+    "category": "section_confusion",
+    "answerable": true,
+    "expected_sources": [
+      "ada_soc_2026_diagnosis"
+    ],
+    "expected_sections": [
+      "Confirming the Diagnosis",
+      "Screening and Testing for Prediabetes and Type 2 Diabetes in Asymptomatic Adults"
+    ],
+    "expected_pages": [
+      4,
+      11
+    ],
+    "required_concepts": [
+      "confirmation",
+      "screening",
+      "different processes"
+    ],
+    "difficulty": "hard",
+    "intent": "diagnosis_confirmation",
+    "notes": "Tests whether confirmation section is confused with screening section"
+  },
+  {
+    "id": "V3-074",
+    "question": "What A1C level in mmol/mol corresponds to the diabetes threshold?",
+    "category": "exact_threshold",
+    "answerable": true,
+    "expected_sources": [
+      "ada_soc_2026_diagnosis"
+    ],
+    "expected_sections": [
+      "Screening and Diagnosis of Diabetes"
+    ],
+    "expected_pages": [
+      2
+    ],
+    "required_concepts": [
+      "48 mmol/mol",
+      "6.5%",
+      "A1C"
+    ],
+    "difficulty": "easy",
+    "intent": "diagnostic_criteria",
+    "notes": "Exact threshold: 48 mmol/mol = 6.5%"
+  },
+  {
+    "id": "V3-075",
+    "question": "What is the exact FPG threshold in both mg/dL and mmol/L for prediabetes?",
+    "category": "exact_threshold",
+    "answerable": true,
+    "expected_sources": [
+      "ada_soc_2026_diagnosis"
+    ],
+    "expected_sections": [
+      "Diagnosis of Prediabetes"
+    ],
+    "expected_pages": [
+      10
+    ],
+    "required_concepts": [
+      "100-125 mg/dL",
+      "5.6-6.9 mmol/L"
+    ],
+    "difficulty": "medium",
+    "intent": "prediabetes_criteria",
+    "notes": "Exact dual-unit threshold for IFG"
+  },
+  {
+    "id": "V3-076",
+    "question": "What is the exact 2-hour glucose threshold in mmol/L for impaired glucose tolerance?",
+    "category": "exact_threshold",
+    "answerable": true,
+    "expected_sources": [
+      "ada_soc_2026_diagnosis"
+    ],
+    "expected_sections": [
+      "Diagnosis of Prediabetes"
+    ],
+    "expected_pages": [
+      10
+    ],
+    "required_concepts": [
+      "140-199 mg/dL",
+      "7.8-11.0 mmol/L"
+    ],
+    "difficulty": "medium",
+    "intent": "prediabetes_criteria",
+    "notes": "Exact dual-unit threshold for IGT"
+  },
+  {
+    "id": "V3-077",
+    "question": "What does the NIDDK say about the pros and cons of the FPG test?",
+    "category": "source_specific",
+    "answerable": true,
+    "expected_sources": [
+      "niddk_diabetes_prediabetes_tests"
+    ],
+    "expected_sections": [
+      "Comparing Diabetes Blood Tests"
+    ],
+    "expected_pages": [
+      1
+    ],
+    "required_concepts": [
+      "NIDDK",
+      "FPG pros",
+      "FPG cons"
+    ],
+    "difficulty": "medium",
+    "intent": "test_comparison",
+    "notes": "NIDDK-specific content about FPG advantages and disadvantages"
+  },
+  {
+    "id": "V3-078",
+    "question": "According to the ADA 2026 standards, what are the stages of type 1 diabetes?",
+    "category": "source_specific",
+    "answerable": true,
+    "expected_sources": [
+      "ada_soc_2026_diagnosis"
+    ],
+    "expected_sections": [
+      "Type 1 Diabetes"
+    ],
+    "expected_pages": [
+      6,
+      7
+    ],
+    "required_concepts": [
+      "ADA",
+      "Stage 1",
+      "Stage 2",
+      "Stage 3"
+    ],
+    "difficulty": "medium",
+    "intent": "type1",
+    "notes": "ADA-specific type 1 diabetes staging"
+  },
+  {
+    "id": "V3-079",
+    "question": "What does the NIDDK comparison table say about OGTT sample stability?",
+    "category": "source_specific",
+    "answerable": true,
+    "expected_sources": [
+      "niddk_diabetes_prediabetes_tests"
+    ],
+    "expected_sections": [
+      "Comparing Diabetes Blood Tests"
+    ],
+    "expected_pages": [
+      1
+    ],
+    "required_concepts": [
+      "NIDDK",
+      "OGTT",
+      "sample stability",
+      "low"
+    ],
+    "difficulty": "medium",
+    "intent": "ogtt",
+    "notes": "NIDDK-specific: OGTT has low sample stability"
+  },
+  {
+    "id": "V3-080",
+    "question": "What is the ADA recommendation for screening frequency in at-risk adults?",
+    "category": "source_specific",
+    "answerable": true,
+    "expected_sources": [
+      "ada_soc_2026_diagnosis"
+    ],
+    "expected_sections": [
+      "Screening and Testing for Prediabetes and Type 2 Diabetes in Asymptomatic Adults"
+    ],
+    "expected_pages": [
+      11,
+      12
+    ],
+    "required_concepts": [
+      "ADA",
+      "screening",
+      "every 3 years"
+    ],
+    "difficulty": "medium",
+    "intent": "screening",
+    "notes": "ADA-specific: every 3 years for at-risk adults"
+  },
+  {
+    "id": "V3-081",
+    "question": "What is the relationship between A1C and average blood glucose?",
+    "category": "a1c",
+    "answerable": true,
+    "expected_sources": [
+      "ada_soc_2026_diagnosis"
+    ],
+    "expected_sections": [
+      "Screening and Diagnosis of Diabetes"
+    ],
+    "expected_pages": [
+      3
+    ],
+    "required_concepts": [
+      "glucose exposure",
+      "120 days",
+      "indirect measure"
+    ],
+    "difficulty": "medium",
+    "intent": "a1c",
+    "notes": "p3: A1C is an indirect measure of glucose exposure over ~120 days"
+  },
+  {
+    "id": "V3-082",
+    "question": "What is the recommended proficiency testing frequency for A1C?",
+    "category": "a1c",
+    "answerable": true,
+    "expected_sources": [
+      "ada_soc_2026_diagnosis"
+    ],
+    "expected_sections": [
+      "Screening and Diagnosis of Diabetes"
+    ],
+    "expected_pages": [
+      3
+    ],
+    "required_concepts": [
+      "three times per year",
+      "proficiency testing"
+    ],
+    "difficulty": "hard",
+    "intent": "a1c",
+    "notes": "p3: proficiency testing at least three times per year"
+  },
+  {
+    "id": "V3-083",
+    "question": "What type of sample is recommended for the FPG test?",
+    "category": "fpg",
+    "answerable": true,
+    "expected_sources": [
+      "niddk_diabetes_prediabetes_tests"
+    ],
+    "expected_sections": [
+      "Comparing Diabetes Blood Tests"
+    ],
+    "expected_pages": [
+      1
+    ],
+    "required_concepts": [
+      "sodium fluoride plasma",
+      "serum not recommended"
+    ],
+    "difficulty": "hard",
+    "intent": "fpg",
+    "notes": "NIDDK: sodium fluoride plasma preferred; many labs measure serum which is not recommended"
+  },
+  {
+    "id": "V3-084",
+    "question": "Why is OGTT considered the most sensitive test for diabetes?",
+    "category": "ogtt",
+    "answerable": true,
+    "expected_sources": [
+      "niddk_diabetes_prediabetes_tests"
+    ],
+    "expected_sections": [
+      "Comparing Diabetes Blood Tests"
+    ],
+    "expected_pages": [
+      1
+    ],
+    "required_concepts": [
+      "most sensitive",
+      "early marker",
+      "impaired glucose metabolism"
+    ],
+    "difficulty": "medium",
+    "intent": "test_comparison",
+    "notes": "NIDDK: OGTT has greater sensitivity than FPG and A1C"
+  },
+  {
+    "id": "V3-085",
+    "question": "What is the role of HLA haplotype in type 1 diabetes risk?",
+    "category": "type1",
+    "answerable": true,
+    "expected_sources": [
+      "ada_soc_2026_diagnosis"
+    ],
+    "expected_sections": [
+      "Type 1 Diabetes"
+    ],
+    "expected_pages": [
+      7,
+      8
+    ],
+    "required_concepts": [
+      "HLA",
+      "genetic risk",
+      "DR",
+      "DQ"
+    ],
+    "difficulty": "hard",
+    "intent": "type1",
+    "notes": "p7-8: HLA haplotype contributes to genetic risk for type 1 diabetes"
+  },
+  {
+    "id": "V3-086",
+    "question": "What are the criteria for Stage 3 type 1 diabetes?",
+    "category": "type1",
+    "answerable": true,
+    "expected_sources": [
+      "ada_soc_2026_diagnosis"
+    ],
+    "expected_sections": [
+      "Type 1 Diabetes"
+    ],
+    "expected_pages": [
+      6,
+      7
+    ],
+    "required_concepts": [
+      "clinical diabetes",
+      "hyperglycemia",
+      "symptomatic"
+    ],
+    "difficulty": "hard",
+    "intent": "type1",
+    "notes": "p6-7: Stage 3 is clinical diabetes with symptoms"
+  },
+  {
+    "id": "V3-087",
+    "question": "What is the two-step approach for gestational diabetes screening?",
+    "category": "gestational",
+    "answerable": true,
+    "expected_sources": [
+      "ada_soc_2026_diagnosis"
+    ],
+    "expected_sections": [
+      "Gestational Diabetes Mellitus"
+    ],
+    "expected_pages": [
+      16,
+      17
+    ],
+    "required_concepts": [
+      "50-g GLT",
+      "100-g OGTT",
+      "two-step"
+    ],
+    "difficulty": "hard",
+    "intent": "gestational",
+    "notes": "p16-17: Step 1: 50-g GLT; Step 2: 100-g OGTT if positive"
+  },
+  {
+    "id": "V3-088",
+    "question": "When should gestational diabetes screening begin?",
+    "category": "gestational",
+    "answerable": true,
+    "expected_sources": [
+      "ada_soc_2026_diagnosis"
+    ],
+    "expected_sections": [
+      "Gestational Diabetes Mellitus"
+    ],
+    "expected_pages": [
+      16
+    ],
+    "required_concepts": [
+      "24-28 weeks",
+      "earlier if high risk"
+    ],
+    "difficulty": "medium",
+    "intent": "gestational",
+    "notes": "p16: 24-28 weeks; earlier for high-risk individuals"
+  },
+  {
+    "id": "V3-089",
+    "question": "What genetic tests are recommended for suspected monogenic diabetes?",
+    "category": "monogenic",
+    "answerable": true,
+    "expected_sources": [
+      "ada_soc_2026_diagnosis"
+    ],
+    "expected_sections": [
+      "Monogenic Diabetes Syndromes"
+    ],
+    "expected_pages": [
+      15,
+      16
+    ],
+    "required_concepts": [
+      "HNF1A",
+      "GCK",
+      "KCNJ11",
+      "genetic testing"
+    ],
+    "difficulty": "hard",
+    "intent": "monogenic",
+    "notes": "p15-16: genetic testing for specific MODY genes"
+  },
+  {
+    "id": "V3-090",
+    "question": "What are the unique considerations for diabetes diagnosis in pregnancy?",
+    "category": "special_populations",
+    "answerable": true,
+    "expected_sources": [
+      "ada_soc_2026_diagnosis"
+    ],
+    "expected_sections": [
+      "Gestational Diabetes Mellitus"
+    ],
+    "expected_pages": [
+      16,
+      17
+    ],
+    "required_concepts": [
+      "pregnancy-specific",
+      "GDM",
+      "IADPSG",
+      "glucose thresholds"
+    ],
+    "difficulty": "medium",
+    "intent": "gestational",
+    "notes": "p16-17: pregnancy-specific diagnostic criteria"
+  },
+  {
+    "id": "V3-091",
+    "question": "What is the role of the DCCT in A1C standardization?",
+    "category": "diagnostic_criteria",
+    "answerable": true,
+    "expected_sources": [
+      "ada_soc_2026_diagnosis"
+    ],
+    "expected_sections": [
+      "Screening and Diagnosis of Diabetes"
+    ],
+    "expected_pages": [
+      3
+    ],
+    "required_concepts": [
+      "DCCT",
+      "NGSP",
+      "standardization",
+      "reference assay"
+    ],
+    "difficulty": "hard",
+    "intent": "diagnostic_criteria",
+    "notes": "p3: A1C standardized to DCCT reference assay through NGSP"
+  },
+  {
+    "id": "V3-092",
+    "question": "What is the within-patient variability of each diabetes test?",
+    "category": "test_comparison",
+    "answerable": true,
+    "expected_sources": [
+      "niddk_diabetes_prediabetes_tests"
+    ],
+    "expected_sections": [
+      "Comparing Diabetes Blood Tests"
+    ],
+    "expected_pages": [
+      1
+    ],
+    "required_concepts": [
+      "FPG variability",
+      "A1C low variability",
+      "OGTT high variability"
+    ],
+    "difficulty": "hard",
+    "intent": "test_comparison",
+    "notes": "NIDDK: A1C has low within-patient variability; FPG and OGTT have higher"
+  },
+  {
+    "id": "V3-093",
+    "question": "How does sample stability differ between FPG, OGTT, and A1C?",
+    "category": "test_comparison",
+    "answerable": true,
+    "expected_sources": [
+      "niddk_diabetes_prediabetes_tests"
+    ],
+    "expected_sections": [
+      "Comparing Diabetes Blood Tests"
+    ],
+    "expected_pages": [
+      1
+    ],
+    "required_concepts": [
+      "FPG low",
+      "OGTT low",
+      "A1C superior"
+    ],
+    "difficulty": "medium",
+    "intent": "test_comparison",
+    "notes": "NIDDK: A1C has superior sample stability; FPG and OGTT are low"
+  },
+  {
+    "id": "V3-094",
+    "question": "What is the cost comparison between diabetes diagnostic tests?",
+    "category": "test_comparison",
+    "answerable": true,
+    "expected_sources": [
+      "niddk_diabetes_prediabetes_tests"
+    ],
+    "expected_sections": [
+      "Comparing Diabetes Blood Tests"
+    ],
+    "expected_pages": [
+      1
+    ],
+    "required_concepts": [
+      "FPG low cost",
+      "OGTT higher cost",
+      "A1C higher cost"
+    ],
+    "difficulty": "medium",
+    "intent": "test_comparison",
+    "notes": "NIDDK: FPG is low cost; OGTT and A1C are higher cost"
+  },
+  {
+    "id": "V3-095",
+    "question": "What is the clinical significance of having one vs two abnormal test results?",
+    "category": "diagnostic_criteria",
+    "answerable": true,
+    "expected_sources": [
+      "ada_soc_2026_diagnosis"
+    ],
+    "expected_sections": [
+      "Confirming the Diagnosis"
+    ],
+    "expected_pages": [
+      4
+    ],
+    "required_concepts": [
+      "single abnormal",
+      "two abnormal",
+      "confirmation",
+      "diagnostic certainty"
+    ],
+    "difficulty": "hard",
+    "intent": "diagnosis_confirmation",
+    "notes": "p4: single abnormal requires confirmation; two abnormal from different tests is diagnostic"
+  },
+  {
+    "id": "V3-096",
+    "question": "Should all pregnant women be screened for diabetes?",
+    "category": "screening",
+    "answerable": true,
+    "expected_sources": [
+      "ada_soc_2026_diagnosis"
+    ],
+    "expected_sections": [
+      "Gestational Diabetes Mellitus"
+    ],
+    "expected_pages": [
+      16
+    ],
+    "required_concepts": [
+      "universal screening",
+      "GDM",
+      "pregnancy"
+    ],
+    "difficulty": "medium",
+    "intent": "gestational",
+    "notes": "p16: screening recommended for all pregnant individuals at 24-28 weeks"
+  },
+  {
+    "id": "V3-097",
+    "question": "What is the recommendation for diabetes screening in HIV patients?",
+    "category": "screening",
+    "answerable": true,
+    "expected_sources": [
+      "ada_soc_2026_diagnosis"
+    ],
+    "expected_sections": [
+      "Screening and Testing for Prediabetes and Type 2 Diabetes in Asymptomatic Adults"
+    ],
+    "expected_pages": [
+      11,
+      12
+    ],
+    "required_concepts": [
+      "HIV",
+      "increased risk",
+      "screening"
+    ],
+    "difficulty": "hard",
+    "intent": "screening",
+    "notes": "p11: HIV is a risk factor that may warrant more frequent screening"
+  },
+  {
+    "id": "V3-098",
+    "question": "What happens if an FPG test result is 126 mg/dL?",
+    "category": "fpg",
+    "answerable": true,
+    "expected_sources": [
+      "ada_soc_2026_diagnosis"
+    ],
+    "expected_sections": [
+      "Screening and Diagnosis of Diabetes"
+    ],
+    "expected_pages": [
+      2
+    ],
+    "required_concepts": [
+      "126 mg/dL",
+      "diabetes threshold",
+      "confirm"
+    ],
+    "difficulty": "medium",
+    "intent": "diagnostic_criteria",
+    "notes": "p2: FPG >=126 indicates diabetes; requires confirmation"
+  },
+  {
+    "id": "V3-099",
+    "question": "What glucose load amount is used in the WHO OGTT protocol?",
+    "category": "ogtt",
+    "answerable": true,
+    "expected_sources": [
+      "ada_soc_2026_diagnosis"
+    ],
+    "expected_sections": [
+      "Screening and Diagnosis of Diabetes"
+    ],
+    "expected_pages": [
+      2
+    ],
+    "required_concepts": [
+      "75 grams",
+      "anhydrous glucose",
+      "WHO"
+    ],
+    "difficulty": "easy",
+    "intent": "ogtt",
+    "notes": "p2: 75 g anhydrous glucose dissolved in water per WHO"
+  },
+  {
+    "id": "V3-100",
+    "question": "What is the relationship between A1C and retinopathy risk?",
+    "category": "a1c",
+    "answerable": true,
+    "expected_sources": [
+      "ada_soc_2026_diagnosis"
+    ],
+    "expected_sections": [
+      "Screening and Diagnosis of Diabetes"
+    ],
+    "expected_pages": [
+      3
+    ],
+    "required_concepts": [
+      "retinopathy",
+      "complications",
+      "correlation"
+    ],
+    "difficulty": "medium",
+    "intent": "a1c",
+    "notes": "p3: A1C highly correlated with retinopathy and cardiovascular disease risk"
+  },
+  {
+    "id": "V3-101",
+    "question": "What alternative A1C methods are available when hemoglobin variants are present?",
+    "category": "a1c",
+    "answerable": true,
+    "expected_sources": [
+      "ada_soc_2026_diagnosis"
+    ],
+    "expected_sections": [
+      "Screening and Diagnosis of Diabetes"
+    ],
+    "expected_pages": [
+      3,
+      4
+    ],
+    "required_concepts": [
+      "alternative assays",
+      "hemoglobin variants",
+      "fructosamine"
+    ],
+    "difficulty": "hard",
+    "intent": "test_interference",
+    "notes": "p3-4: alternative assays available for hemoglobin variant situations"
+  },
+  {
+    "id": "V3-102",
+    "question": "What is the prevalence of type 1 diabetes autoantibodies in the general population?",
+    "category": "type1",
+    "answerable": true,
+    "expected_sources": [
+      "ada_soc_2026_diagnosis"
+    ],
+    "expected_sections": [
+      "Type 1 Diabetes"
+    ],
+    "expected_pages": [
+      7
+    ],
+    "required_concepts": [
+      "prevalence",
+      "autoantibodies",
+      "population"
+    ],
+    "difficulty": "hard",
+    "intent": "type1",
+    "notes": "p7: discusses autoantibody prevalence in screening studies"
+  },
+  {
+    "id": "V3-103",
+    "question": "What is the ADA recommendation for type 2 diabetes risk assessment?",
+    "category": "type2",
+    "answerable": true,
+    "expected_sources": [
+      "ada_soc_2026_diagnosis"
+    ],
+    "expected_sections": [
+      "Screening and Testing for Prediabetes and Type 2 Diabetes in Asymptomatic Adults"
+    ],
+    "expected_pages": [
+      11
+    ],
+    "required_concepts": [
+      "risk assessment",
+      "screening",
+      "prediabetes"
+    ],
+    "difficulty": "medium",
+    "intent": "screening",
+    "notes": "p11: risk assessment to identify individuals for screening"
+  },
+  {
+    "id": "V3-104",
+    "question": "What are the IADPSG diagnostic thresholds for one-step GDM?",
+    "category": "gestational",
+    "answerable": true,
+    "expected_sources": [
+      "ada_soc_2026_diagnosis"
+    ],
+    "expected_sections": [
+      "Gestational Diabetes Mellitus"
+    ],
+    "expected_pages": [
+      16,
+      17
+    ],
+    "required_concepts": [
+      "fasting 92 mg/dL",
+      "1-hour 180 mg/dL",
+      "2-hour 153 mg/dL"
+    ],
+    "difficulty": "hard",
+    "intent": "gestational",
+    "notes": "p17: IADPSG one-step thresholds"
+  },
+  {
+    "id": "V3-105",
+    "question": "What percentage of diabetes cases are estimated to be monogenic?",
+    "category": "monogenic",
+    "answerable": true,
+    "expected_sources": [
+      "ada_soc_2026_diagnosis"
+    ],
+    "expected_sections": [
+      "Monogenic Diabetes Syndromes"
+    ],
+    "expected_pages": [
+      15
+    ],
+    "required_concepts": [
+      "1-5%",
+      "monogenic",
+      "MODY prevalence"
+    ],
+    "difficulty": "hard",
+    "intent": "monogenic",
+    "notes": "p15: estimated 1-5% of diabetes cases are monogenic"
+  },
+  {
+    "id": "V3-106",
+    "question": "What unique diabetes screening considerations exist for HIV patients?",
+    "category": "special_populations",
+    "answerable": true,
+    "expected_sources": [
+      "ada_soc_2026_diagnosis"
+    ],
+    "expected_sections": [
+      "Screening and Testing for Prediabetes and Type 2 Diabetes in Asymptomatic Adults"
+    ],
+    "expected_pages": [
+      11
+    ],
+    "required_concepts": [
+      "HIV",
+      "increased risk",
+      "altered glucose metabolism"
+    ],
+    "difficulty": "hard",
+    "intent": "special_population",
+    "notes": "p11: HIV patients have increased diabetes risk"
+  },
+  {
+    "id": "V3-107",
+    "question": "What is the reproducibility of each diabetes diagnostic test?",
+    "category": "test_comparison",
+    "answerable": true,
+    "expected_sources": [
+      "niddk_diabetes_prediabetes_tests"
+    ],
+    "expected_sections": [
+      "Comparing Diabetes Blood Tests"
+    ],
+    "expected_pages": [
+      1
+    ],
+    "required_concepts": [
+      "FPG reproducibility",
+      "A1C reproducibility",
+      "OGTT low reproducibility"
+    ],
+    "difficulty": "hard",
+    "intent": "test_comparison",
+    "notes": "NIDDK: OGTT has low reproducibility; FPG and A1C are more reproducible"
+  },
+  {
+    "id": "V3-108",
+    "question": "How do point-of-care A1C tests compare to laboratory A1C tests?",
+    "category": "test_comparison",
+    "answerable": true,
+    "expected_sources": [
+      "ada_soc_2026_diagnosis"
+    ],
+    "expected_sections": [
+      "Screening and Diagnosis of Diabetes"
+    ],
+    "expected_pages": [
+      2,
+      3
+    ],
+    "required_concepts": [
+      "POC",
+      "laboratory",
+      "NGSP certified",
+      "moderate-to-high complexity"
+    ],
+    "difficulty": "hard",
+    "intent": "a1c",
+    "notes": "p2-3: POC tests should only be in labs certified for moderate-to-high complexity"
+  },
+  {
+    "id": "V3-109",
+    "question": "What tests are preferred for confirming a diabetes diagnosis?",
+    "category": "confirmation",
+    "answerable": true,
+    "expected_sources": [
+      "ada_soc_2026_diagnosis"
+    ],
+    "expected_sections": [
+      "Confirming the Diagnosis"
+    ],
+    "expected_pages": [
+      4
+    ],
+    "required_concepts": [
+      "repeat A1C",
+      "OGTT",
+      "preferably"
+    ],
+    "difficulty": "medium",
+    "intent": "diagnosis_confirmation",
+    "notes": "p4: preferably repeat A1C or OGTT for confirmation"
+  },
+  {
+    "id": "V3-110",
+    "question": "What racial and ethnic groups have higher type 2 diabetes risk?",
+    "category": "screening",
+    "answerable": true,
+    "expected_sources": [
+      "ada_soc_2026_diagnosis"
+    ],
+    "expected_sections": [
+      "Screening and Testing for Prediabetes and Type 2 Diabetes in Asymptomatic Adults"
+    ],
+    "expected_pages": [
+      11
+    ],
+    "required_concepts": [
+      "African American",
+      "Latino",
+      "Native American",
+      "Asian American"
+    ],
+    "difficulty": "medium",
+    "intent": "screening",
+    "notes": "p11: certain racial/ethnic groups have higher risk"
+  },
+  {
+    "id": "V3-111",
+    "question": "What is the ADA recommendation for diabetes screening in overweight children?",
+    "category": "screening",
+    "answerable": true,
+    "expected_sources": [
+      "ada_soc_2026_diagnosis"
+    ],
+    "expected_sections": [
+      "Screening and Testing for Prediabetes and Type 2 Diabetes in Asymptomatic Adults"
+    ],
+    "expected_pages": [
+      10
+    ],
+    "required_concepts": [
+      "overweight",
+      "BMI 85th percentile",
+      "children",
+      "screening"
+    ],
+    "difficulty": "hard",
+    "intent": "screening",
+    "notes": "p10: screen overweight children with BMI >=85th percentile and risk factors"
+  },
+  {
+    "id": "V3-112",
+    "question": "What is the significance of the term unequivocal hyperglycemia?",
+    "category": "diagnostic_criteria",
+    "answerable": true,
+    "expected_sources": [
+      "ada_soc_2026_diagnosis"
+    ],
+    "expected_sections": [
+      "Confirming the Diagnosis"
+    ],
+    "expected_pages": [
+      4
+    ],
+    "required_concepts": [
+      "unequivocal",
+      "hyperglycemia",
+      "symptoms",
+      "confirmation not needed"
+    ],
+    "difficulty": "hard",
+    "intent": "diagnosis_confirmation",
+    "notes": "p4: unequivocal hyperglycemia with symptoms does not require confirmation"
+  },
+  {
+    "id": "V3-113",
+    "question": "What is the recommended approach for diagnosing diabetes in hospitalized patients?",
+    "category": "diagnostic_criteria",
+    "answerable": true,
+    "expected_sources": [
+      "ada_soc_2026_diagnosis"
+    ],
+    "expected_sections": [
+      "Confirming the Diagnosis"
+    ],
+    "expected_pages": [
+      4
+    ],
+    "required_concepts": [
+      "hospital",
+      "acute illness",
+      "stress hyperglycemia"
+    ],
+    "difficulty": "hard",
+    "intent": "diagnosis_confirmation",
+    "notes": "p4: diagnosis should not be based on acute illness samples alone"
+  },
+  {
+    "id": "V3-114",
+    "question": "What is the lag time between blood glucose changes and A1C changes?",
+    "category": "a1c",
+    "answerable": true,
+    "expected_sources": [
+      "ada_soc_2026_diagnosis"
+    ],
+    "expected_sections": [
+      "Screening and Diagnosis of Diabetes"
+    ],
+    "expected_pages": [
+      3
+    ],
+    "required_concepts": [
+      "120 days",
+      "lag time",
+      "glucose exposure"
+    ],
+    "difficulty": "medium",
+    "intent": "a1c",
+    "notes": "p3: clinically meaningful A1C changes take <120 days to appear"
+  },
+  {
+    "id": "V3-115",
+    "question": "What diurnal variation affects FPG test results?",
+    "category": "fpg",
+    "answerable": true,
+    "expected_sources": [
+      "niddk_diabetes_prediabetes_tests"
+    ],
+    "expected_sections": [
+      "Comparing Diabetes Blood Tests"
+    ],
+    "expected_pages": [
+      1
+    ],
+    "required_concepts": [
+      "diurnal variation",
+      "morning sample",
+      "variation"
+    ],
+    "difficulty": "hard",
+    "intent": "fpg",
+    "notes": "NIDDK: diurnal variation is a con of FPG testing"
+  },
+  {
+    "id": "V3-116",
+    "question": "What is the coefficient of variation for OGTT?",
+    "category": "test_comparison",
+    "answerable": true,
+    "expected_sources": [
+      "niddk_diabetes_prediabetes_tests"
+    ],
+    "expected_sections": [
+      "Comparing Diabetes Blood Tests"
+    ],
+    "expected_pages": [
+      1
+    ],
+    "required_concepts": [
+      "16.7%",
+      "coefficient of variation",
+      "OGTT"
+    ],
+    "difficulty": "hard",
+    "intent": "test_comparison",
+    "notes": "NIDDK: OGTT range of variability is 16.7%"
+  },
+  {
+    "id": "V3-117",
+    "question": "What information does the NIDDK comparison table contain about each test?",
+    "category": "table_retrieval",
+    "answerable": true,
+    "expected_sources": [
+      "niddk_diabetes_prediabetes_tests"
+    ],
+    "expected_sections": [
+      "Comparing Diabetes Blood Tests"
+    ],
+    "expected_pages": [
+      1
+    ],
+    "required_concepts": [
+      "uses",
+      "technical features",
+      "pros",
+      "cons"
+    ],
+    "difficulty": "medium",
+    "intent": "table_lookup",
+    "notes": "NIDDK: table contains Uses, Technical Features, PROS, and CONS for each test"
+  },
+  {
+    "id": "V3-118",
+    "question": "How do the NIDDK test characteristics complement the ADA diagnostic criteria?",
+    "category": "multi_hop",
+    "answerable": true,
+    "expected_sources": [
+      "ada_soc_2026_diagnosis",
+      "niddk_diabetes_prediabetes_tests"
+    ],
+    "expected_sections": [
+      "Screening and Diagnosis of Diabetes",
+      "Comparing Diabetes Blood Tests"
+    ],
+    "expected_pages": [
+      2,
+      1
+    ],
+    "required_concepts": [
+      "ADA criteria",
+      "NIDDK characteristics",
+      "complementary"
+    ],
+    "difficulty": "hard",
+    "intent": "test_comparison",
+    "notes": "Requires combining ADA diagnostic thresholds with NIDDK test characteristics"
+  },
+  {
+    "id": "V3-119",
+    "question": "What is the A1C threshold for diagnosing prediabetes in gestational diabetes?",
+    "category": "adversarial",
+    "answerable": false,
+    "expected_sources": [],
+    "expected_sections": [],
+    "expected_pages": [],
+    "required_concepts": [],
+    "difficulty": "hard",
+    "intent": "unsupported",
+    "notes": "A1C is not used for GDM diagnosis; this conflates two different diagnostic contexts"
+  }
+]

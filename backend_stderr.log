@@ -1,0 +1,111 @@
+INFO:     Started server process [21788]
+INFO:     Waiting for application startup.
+2026-08-20 10:57:32,958 [INFO] backend.app.main: Starting Diabetes RAG Backend...
+2026-08-20 10:57:33,061 [INFO] backend.app.retrieval.vector_store: Collection 'diabetes_rag': 58 documents
+2026-08-20 10:57:33,069 [INFO] backend.app.retrieval.hybrid_search: BM25 index loaded: 58 chunks
+2026-08-20 10:57:33,069 [INFO] backend.app.main: BM25 index loaded (111ms)
+2026-08-20 10:57:33,070 [INFO] backend.app.retrieval.embeddings: Loading embedding model: sentence-transformers/all-MiniLM-L6-v2
+2026-08-20 10:57:33,072 [INFO] sentence_transformers.base.model: No device provided, using cpu
+2026-08-20 10:57:33,976 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-08-20 10:57:33,987 [WARNING] huggingface_hub.utils._http: Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-08-20 10:57:34,127 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/modules.json "HTTP/1.1 200 OK"
+2026-08-20 10:57:34,329 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+2026-08-20 10:57:34,509 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config_sentence_transformers.json "HTTP/1.1 200 OK"
+2026-08-20 10:57:34,512 [INFO] sentence_transformers.base.model: Loading SentenceTransformer model from sentence-transformers/all-MiniLM-L6-v2.
+2026-08-20 10:57:34,699 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+2026-08-20 10:57:34,949 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config_sentence_transformers.json "HTTP/1.1 200 OK"
+2026-08-20 10:57:35,167 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-08-20 10:57:35,261 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/README.md "HTTP/1.1 200 OK"
+2026-08-20 10:57:35,508 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-08-20 10:57:35,573 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/modules.json "HTTP/1.1 200 OK"
+2026-08-20 10:57:35,827 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-08-20 10:57:35,921 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/sentence_bert_config.json "HTTP/1.1 200 OK"
+2026-08-20 10:57:36,086 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/adapter_config.json "HTTP/1.1 404 Not Found"
+2026-08-20 10:57:36,259 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-08-20 10:57:36,286 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config.json "HTTP/1.1 200 OK"
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|##########| 103/103 [00:00<00:00, 7807.94it/s]
+2026-08-20 10:57:36,589 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/processor_config.json "HTTP/1.1 404 Not Found"
+2026-08-20 10:57:36,779 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/preprocessor_config.json "HTTP/1.1 404 Not Found"
+2026-08-20 10:57:36,954 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/video_preprocessor_config.json "HTTP/1.1 404 Not Found"
+2026-08-20 10:57:37,147 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/preprocessor_config.json "HTTP/1.1 404 Not Found"
+2026-08-20 10:57:37,461 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-08-20 10:57:38,346 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/tokenizer_config.json "HTTP/1.1 200 OK"
+2026-08-20 10:57:38,635 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-08-20 10:57:38,696 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config.json "HTTP/1.1 200 OK"
+2026-08-20 10:57:38,885 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-08-20 10:57:38,952 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config.json "HTTP/1.1 200 OK"
+2026-08-20 10:57:39,117 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-08-20 10:57:39,174 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/tokenizer_config.json "HTTP/1.1 200 OK"
+2026-08-20 10:57:39,359 [INFO] httpx: HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-08-20 10:57:39,560 [INFO] httpx: HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-08-20 10:57:39,814 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/1_Pooling/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-08-20 10:57:39,879 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/1_Pooling%2Fconfig.json "HTTP/1.1 200 OK"
+2026-08-20 10:57:40,181 [INFO] httpx: HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2 "HTTP/1.1 200 OK"
+2026-08-20 10:57:40,194 [INFO] backend.app.retrieval.embeddings: Model loaded. Dimension: 384
+2026-08-20 10:57:40,195 [INFO] backend.app.main: Embedding model preloaded (7125ms)
+2026-08-20 10:57:40,195 [INFO] backend.app.main: ============================================================
+2026-08-20 10:57:40,195 [INFO] backend.app.main: STARTUP DIAGNOSTIC
+2026-08-20 10:57:40,196 [INFO] backend.app.main:   Embedding model:   sentence-transformers/all-MiniLM-L6-v2
+2026-08-20 10:57:40,196 [INFO] backend.app.main:   Reranker enabled:  False
+2026-08-20 10:57:40,196 [INFO] backend.app.main:   Index ready:       True
+2026-08-20 10:57:40,196 [INFO] backend.app.main:   LLM provider mode: auto
+2026-08-20 10:57:40,197 [INFO] backend.app.main:   LLM providers:     gemini \u2192 openrouter
+2026-08-20 10:57:40,197 [INFO] backend.app.main:     gemini: True
+2026-08-20 10:57:40,197 [INFO] backend.app.main:     openrouter: True
+2026-08-20 10:57:40,197 [INFO] backend.app.main:   Cold-start time:   7237ms
+2026-08-20 10:57:40,198 [INFO] backend.app.main: ============================================================
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|##########| 1/1 [00:00<00:00,  6.84it/s]Batches: 100%|##########| 1/1 [00:00<00:00,  6.82it/s]
+2026-08-20 11:02:07,733 [INFO] backend.app.generation.llm: [LLM] Provider chain: gemini \u2192 openrouter
+2026-08-20 11:02:07,733 [INFO] backend.app.generation.llm: [PROVIDER] Trying gemini...
+2026-08-20 11:02:14,323 [INFO] httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent?key=AQ.Ab8RN6Krm6nAbB0GyTiQNCP_oqGxQrdUQtc-scRZPDZrHsGWwA "HTTP/1.1 200 OK"
+2026-08-20 11:02:14,325 [INFO] backend.app.generation.providers: [PROVIDER] gemini OK: gemini-3.5-flash (6592ms, 4624 tokens)
+2026-08-20 11:02:14,326 [INFO] backend.app.generation.llm: [PROVIDER] gemini result: success (6.6s)
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|##########| 1/1 [00:00<00:00, 99.36it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|##########| 1/1 [00:00<00:00, 102.40it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|##########| 1/1 [00:00<00:00, 94.35it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|##########| 1/1 [00:00<00:00, 92.37it/s]
+2026-08-20 11:02:14,438 [INFO] backend.app.generation.llm: [LLM] Provider chain: gemini \u2192 openrouter
+2026-08-20 11:02:14,438 [INFO] backend.app.generation.llm: [PROVIDER] Trying gemini...
+2026-08-20 11:02:23,569 [INFO] httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent?key=AQ.Ab8RN6Krm6nAbB0GyTiQNCP_oqGxQrdUQtc-scRZPDZrHsGWwA "HTTP/1.1 200 OK"
+2026-08-20 11:02:23,589 [INFO] backend.app.generation.providers: [PROVIDER] gemini OK: gemini-3.5-flash (9151ms, 5139 tokens)
+2026-08-20 11:02:23,590 [INFO] backend.app.generation.llm: [PROVIDER] gemini result: success (9.2s)
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|##########| 1/1 [00:00<00:00, 28.42it/s]
+2026-08-20 11:29:39,709 [INFO] backend.app.generation.llm: [LLM] Provider chain: gemini \u2192 openrouter
+2026-08-20 11:29:39,709 [INFO] backend.app.generation.llm: [PROVIDER] Trying gemini...
+2026-08-20 11:29:46,862 [INFO] httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent?key=AQ.Ab8RN6Krm6nAbB0GyTiQNCP_oqGxQrdUQtc-scRZPDZrHsGWwA "HTTP/1.1 200 OK"
+2026-08-20 11:29:46,873 [INFO] backend.app.generation.providers: [PROVIDER] gemini OK: gemini-3.5-flash (7163ms, 4728 tokens)
+2026-08-20 11:29:46,874 [INFO] backend.app.generation.llm: [PROVIDER] gemini result: success (7.2s)
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|##########| 1/1 [00:00<00:00, 66.52it/s]
+2026-08-20 11:30:33,711 [INFO] backend.app.generation.llm: [LLM] Provider chain: gemini \u2192 openrouter
+2026-08-20 11:30:33,712 [INFO] backend.app.generation.llm: [PROVIDER] Trying gemini...
+2026-08-20 11:30:41,553 [INFO] httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent?key=AQ.Ab8RN6Krm6nAbB0GyTiQNCP_oqGxQrdUQtc-scRZPDZrHsGWwA "HTTP/1.1 200 OK"
+2026-08-20 11:30:41,568 [INFO] backend.app.generation.providers: [PROVIDER] gemini OK: gemini-3.5-flash (7855ms, 5004 tokens)
+2026-08-20 11:30:41,568 [INFO] backend.app.generation.llm: [PROVIDER] gemini result: success (7.9s)
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|##########| 1/1 [00:00<00:00, 47.42it/s]
+2026-08-20 11:32:09,832 [INFO] backend.app.generation.llm: [LLM] Provider chain: gemini \u2192 openrouter
+2026-08-20 11:32:09,833 [INFO] backend.app.generation.llm: [PROVIDER] Trying gemini...
+2026-08-20 11:32:16,589 [INFO] httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent?key=AQ.Ab8RN6Krm6nAbB0GyTiQNCP_oqGxQrdUQtc-scRZPDZrHsGWwA "HTTP/1.1 200 OK"
+2026-08-20 11:32:16,602 [INFO] backend.app.generation.providers: [PROVIDER] gemini OK: gemini-3.5-flash (6768ms, 4686 tokens)
+2026-08-20 11:32:16,602 [INFO] backend.app.generation.llm: [PROVIDER] gemini result: success (6.8s)
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|##########| 1/1 [00:00<00:00, 44.65it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|##########| 1/1 [00:00<00:00, 31.63it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|##########| 1/1 [00:00<00:00, 25.60it/s]
+2026-08-20 11:39:18,617 [INFO] backend.app.generation.llm: [LLM] Provider chain: gemini \u2192 openrouter
+2026-08-20 11:39:18,617 [INFO] backend.app.generation.llm: [PROVIDER] Trying gemini...
+2026-08-20 11:39:26,107 [INFO] httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent?key=AQ.Ab8RN6Krm6nAbB0GyTiQNCP_oqGxQrdUQtc-scRZPDZrHsGWwA "HTTP/1.1 200 OK"
+2026-08-20 11:39:26,109 [INFO] backend.app.generation.providers: [PROVIDER] gemini OK: gemini-3.5-flash (7490ms, 4787 tokens)
+2026-08-20 11:39:26,110 [INFO] backend.app.generation.llm: [PROVIDER] gemini result: success (7.5s)
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|##########| 1/1 [00:00<00:00, 38.99it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|##########| 1/1 [00:00<00:00, 34.05it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|##########| 1/1 [00:00<00:00, 34.99it/s]
+2026-08-20 11:40:46,129 [INFO] backend.app.generation.llm: [LLM] Provider chain: gemini \u2192 openrouter
+2026-08-20 11:40:46,130 [INFO] backend.app.generation.llm: [PROVIDER] Trying gemini...
+2026-08-20 11:40:53,989 [INFO] httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent?key=AQ.Ab8RN6Krm6nAbB0GyTiQNCP_oqGxQrdUQtc-scRZPDZrHsGWwA "HTTP/1.1 200 OK"
+2026-08-20 11:40:53,991 [INFO] backend.app.generation.providers: [PROVIDER] gemini OK: gemini-3.5-flash (7861ms, 4925 tokens)
+2026-08-20 11:40:53,992 [INFO] backend.app.generation.llm: [PROVIDER] gemini result: success (7.9s)
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|##########| 1/1 [00:00<00:00, 45.26it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|##########| 1/1 [00:00<00:00, 32.11it/s]
+INFO:     Shutting down

@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diabetes Clinical Evidence Copilot</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='40' y2='40' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0%25' stop-color='%231565C0'/%3E%3Cstop offset='100%25' stop-color='%230D47A1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='40' height='40' rx='10' fill='url(%23g)'/%3E%3Cpath d='M20 10v20M10 20h20' stroke='white' stroke-width='2.5' stroke-linecap='round'/%3E%3Ccircle cx='20' cy='20' r='4.5' stroke='white' stroke-width='1.5' fill='none' opacity='0.6'/%3E%3C/svg%3E">
+    <link rel="stylesheet" href="src/styles/main.css">
+</head>
+<body>
+    <a href="#user-input" class="skip-link">Skip to input</a>
+    <div id="app" class="app-layout">
+
+        <header class="app-header" role="banner">
+            <div class="header-left">
+                <button class="sidebar-toggle" id="sidebar-toggle" aria-label="Toggle sidebar">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+                </button>
+                <div class="brand">
+                    <div class="brand-icon">
+                        <svg width="30" height="30" viewBox="0 0 40 40" fill="none">
+                            <defs>
+                                <linearGradient id="logoH" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+                                    <stop offset="0%" stop-color="#1565C0"/>
+                                    <stop offset="100%" stop-color="#0D47A1"/>
+                                </linearGradient>
+                            </defs>
+                            <rect width="40" height="40" rx="10" fill="url(#logoH)"/>
+                            <path d="M20 10v20M10 20h20" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+                            <circle cx="20" cy="20" r="4.5" stroke="white" stroke-width="1.5" fill="none" opacity="0.6"/>
+                        </svg>
+                    </div>
+                    <div class="brand-text">
+                        <h1>Clinical Evidence Copilot</h1>
+                        <span class="brand-sub">Evidence-grounded diabetes decision support</span>
+                    </div>
+                </div>
+            </div>
+            <div class="header-right">
+                <div class="engine-status" id="engine-status" role="status" aria-label="System status">
+                    <span class="status-dot"></span>
+                    <span class="status-text">Checking...</span>
+                </div>
+                <button class="btn-demo" id="demo-mode-btn" title="Demo mode for judges">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:inline;vertical-align:-1px;margin-right:3px"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                    Demo
+                </button>
+                <button class="btn-icon" id="how-it-works-btn" aria-label="How the system works" title="How the system works">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                </button>
+                <button class="btn-icon" id="sources-btn" aria-label="View sources" title="Knowledge sources">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                </button>
+                <button class="btn-icon" id="clear-btn" aria-label="Clear conversation" title="Clear conversation">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
+                </button>
+            </div>
+        </header>
+
+        <aside class="sidebar" id="sidebar" role="complementary" aria-label="System information">
+            <div class="sidebar-section">
+                <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;">
+                    <h3 class="sidebar-title" style="margin-bottom:0">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                        Chats
+                    </h3>
+                    <button class="btn-new-chat" id="new-chat-btn" title="Start new chat">
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                        New
+                    </button>
+                </div>
+                <div class="recent-chats" id="recent-chats">
+                    <div class="sidebar-loading">No conversations yet</div>
+                </div>
+            </div>
+            <div class="sidebar-section">
+                <h3 class="sidebar-title">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+                    Pipeline
+                </h3>
+                <div class="pipeline-view" id="pipeline-view">
+                    <div class="pipeline-step" data-step="intent">
+                        <div class="pipeline-dot"></div>
+                        <span>Intent Detection</span>
+                    </div>
+                    <div class="pipeline-step" data-step="retrieve">
+                        <div class="pipeline-dot"></div>
+                        <span>Hybrid Retrieval</span>
+                    </div>
+                    <div class="pipeline-step" data-step="evidence">
+                        <div class="pipeline-dot"></div>
+                        <span>Evidence Selection</span>
+                    </div>
+                    <div class="pipeline-step" data-step="conflict">
+                        <div class="pipeline-dot"></div>
+                        <span>Conflict Detection</span>
+                    </div>
+                    <div class="pipeline-step" data-step="generate">
+                        <div class="pipeline-dot"></div>
+                        <span>Grounded Generation</span>
+                    </div>
+                    <div class="pipeline-step" data-step="citation">
+                        <div class="pipeline-dot"></div>
+                        <span>Citation Validation</span>
+                    </div>
+                    <div class="pipeline-step" data-step="verify">
+                        <div class="pipeline-dot"></div>
+                        <span>Answer Verification</span>
+                    </div>
+                    <div class="pipeline-step" data-step="safety">
+                        <div class="pipeline-dot"></div>
+                        <span>Safety Check</span>
+                    </div>
+                    <div class="pipeline-step" data-step="answer">
+                        <div class="pipeline-dot"></div>
+                        <span>Final Answer</span>
+                    </div>
+                </div>
+            </div>
+            <div class="sidebar-section">
+                <h3 class="sidebar-title">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                    Sources
+                </h3>
+                <div class="sidebar-sources" id="sidebar-sources">
+                    <div class="sidebar-loading">Loading sources...</div>
+                </div>
+            </div>
+            <div class="sidebar-section sidebar-footer">
+                <button class="btn-new-chat" id="clear-all-chats-btn" style="width:100%;justify-content:center;margin-bottom:8px;font-size:11px;color:var(--color-danger);border-color:var(--color-danger)">
+                    <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
+                    Clear All Chats
+                </button>
+                <p class="sidebar-disclaimer">For clinical decision support only. This system does not replace professional medical judgment.</p>
+            </div>
+        </aside>
+
+        <main class="main-content" role="main">
+            <div class="chat-container" id="chat-container">
+
+                <div class="welcome-screen" id="welcome-screen">
+                    <div class="welcome-hero">
+                        <div class="welcome-icon">
+                            <svg width="64" height="64" viewBox="0 0 40 40" fill="none">
+                                <defs>
+                                    <linearGradient id="logoW" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+                                        <stop offset="0%" stop-color="#1565C0"/>
+                                        <stop offset="100%" stop-color="#0D47A1"/>
+                                    </linearGradient>
+                                </defs>
+                                <rect width="40" height="40" rx="10" fill="url(#logoW)" opacity="0.1"/>
+                                <path d="M20 10v20M10 20h20" stroke="#1565C0" stroke-width="2.5" stroke-linecap="round"/>
+                                <circle cx="20" cy="20" r="4.5" stroke="#1565C0" stroke-width="1.5" fill="none" opacity="0.4"/>
+                                <path d="M20 6.5v2.5M20 31v2.5M6.5 20h2.5M31 20h2.5" stroke="#1565C0" stroke-width="1.5" stroke-linecap="round" opacity="0.2"/>
+                            </svg>
+                        </div>
+                        <h2>Diabetes Clinical Evidence Copilot</h2>
+                        <p class="welcome-desc">Evidence-grounded clinical decision support for diabetes diagnosis and classification. Every answer is verified against ADA Standards of Care 2026 and NIDDK guidelines with full citation traceability.</p>
+                    </div>
+
+                    <div class="welcome-flow" aria-label="How it works">
+                        <div class="flow-step"><span class="flow-num">1</span>Question</div>
+                        <div class="flow-arrow">→</div>
+                        <div class="flow-step"><span class="flow-num">2</span>Evidence</div>
+                        <div class="flow-arrow">→</div>
+                        <div class="flow-step"><span class="flow-num">3</span>Verification</div>
+                        <div class="flow-arrow">→</div>
+                        <div class="flow-step"><span class="flow-num">4</span>Safe Answer</div>
+                    </div>
+
+                    <div class="example-questions">
+                        <h3>Try a question</h3>
+                        <div class="examples-grid">
+                            <button class="example-btn" data-question="What is the fasting glucose cutoff for diagnosing diabetes?">
+                                <span class="example-label">Diagnostic threshold</span>
+                                <span class="example-desc">FPG cutoff for diabetes</span>
+                            </button>
+                            <button class="example-btn" data-question="How is prediabetes diagnosed?">
+                                <span class="example-label">Prediabetes criteria</span>
+                                <span class="example-desc">Classification criteria</span>
+                            </button>
+                            <button class="example-btn" data-question="What are the differences between A1C and FPG tests?">
+                                <span class="example-label">Test comparison</span>
+                                <span class="example-desc">A1C vs FPG</span>
+                            </button>
+                            <button class="example-btn" data-question="What is the OGTT cutoff for prediabetes?">
+                                <span class="example-label">OGTT thresholds</span>
+                                <span class="example-desc">Oral glucose tolerance</span>
+                            </button>
+                            <button class="example-btn" data-question="How is gestational diabetes diagnosed?">
+                                <span class="example-label">Gestational diabetes</span>
+                                <span class="example-desc">Pregnancy-specific criteria</span>
+                            </button>
+                            <button class="example-btn example-btn-refuse" data-question="What is the recommended dosage of insulin for type 2 diabetes?">
+                                <span class="example-label">Safety boundary</span>
+                                <span class="example-desc">Medication question (refused)</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="welcome-different" style="margin-top:28px;padding:16px;border:1px solid var(--color-border);border-radius:var(--radius-lg);background:var(--color-bg);">
+                        <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px;">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                            <span style="font-size:13px;font-weight:600;color:var(--color-text);">Clinical Evidence Decision Path</span>
+                        </div>
+                        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">
+                            <div style="font-size:12px;color:var(--color-text-secondary);display:flex;align-items:flex-start;gap:6px;">
+                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--color-success)" stroke-width="2.5" style="flex-shrink:0;margin-top:2px"><path d="M20 6L9 17l-5-5"/></svg>
+                                Evidence-first answers with receipts
+                            </div>
+                            <div style="font-size:12px;color:var(--color-text-secondary);display:flex;align-items:flex-start;gap:6px;">
+                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--color-success)" stroke-width="2.5" style="flex-shrink:0;margin-top:2px"><path d="M20 6L9 17l-5-5"/></svg>
+                                Clinical context verification
+                            </div>
+                            <div style="font-size:12px;color:var(--color-text-secondary);display:flex;align-items:flex-start;gap:6px;">
+                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--color-success)" stroke-width="2.5" style="flex-shrink:0;margin-top:2px"><path d="M20 6L9 17l-5-5"/></svg>
+                                Trust layer with safety checks
+                            </div>
+                            <div style="font-size:12px;color:var(--color-text-secondary);display:flex;align-items:flex-start;gap:6px;">
+                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--color-success)" stroke-width="2.5" style="flex-shrink:0;margin-top:2px"><path d="M20 6L9 17l-5-5"/></svg>
+                                Answer trace &amp; source passports
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="messages" id="messages"></div>
+            </div>
+
+            <div class="input-container">
+                <div class="input-wrapper">
+                    <textarea id="user-input" placeholder="Ask a clinical question about diabetes..." rows="1" aria-label="Type your question"></textarea>
+                    <button id="send-btn" class="btn-send" aria-label="Send question">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                    </button>
+                </div>
+            </div>
+        </main>
+
+        <aside class="evidence-drawer" id="evidence-drawer" role="complementary" aria-label="Evidence details">
+            <div class="drawer-header">
+                <h3>Evidence Details</h3>
+                <button class="btn-icon drawer-close" id="drawer-close" aria-label="Close evidence panel">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                </button>
+            </div>
+            <div class="drawer-body" id="drawer-body">
+                <p class="drawer-empty">Click an evidence citation to view details.</p>
+            </div>
+        </aside>
+    </div>
+
+    <div id="sources-modal" class="modal hidden" role="dialog" aria-labelledby="sources-modal-title">
+        <div class="modal-backdrop"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="sources-modal-title">Knowledge Sources</h2>
+                <button class="modal-close" aria-label="Close modal">&times;</button>
+            </div>
+            <div class="modal-body" id="sources-list"></div>
+        </div>
+    </div>
+
+    <div id="how-it-works-modal" class="modal hidden" role="dialog" aria-labelledby="hiw-modal-title">
+        <div class="modal-backdrop"></div>
+        <div class="modal-content modal-wide">
+            <div class="modal-header">
+                <h2 id="hiw-modal-title">How the System Works</h2>
+                <button class="modal-close" aria-label="Close modal">&times;</button>
+            </div>
+            <div class="modal-body" id="how-it-works-content"></div>
+        </div>
+    </div>
+
+    <div id="why-modal" class="modal hidden" role="dialog" aria-labelledby="why-modal-title">
+        <div class="modal-backdrop"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="why-modal-title">Why This Answer?</h2>
+                <button class="modal-close" aria-label="Close modal">&times;</button>
+            </div>
+            <div class="modal-body" id="why-content"></div>
+        </div>
+    </div>
+
+    <div id="drawer-overlay" class="drawer-overlay hidden"></div>
+    <div id="mobile-overlay" class="mobile-overlay hidden" onclick="document.querySelector('.app-layout').classList.remove('sidebar-open')"></div>
+
+    <script src="src/services/api.js"></script>
+    <script src="src/services/chats.js"></script>
+    <script src="src/utils/markdown.js"></script>
+    <script src="src/utils/helpers.js"></script>
+    <script src="src/components/Tables/renderer.js"></script>
+    <script src="src/components/Safety/indicator.js"></script>
+    <script src="src/components/Chat/message.js"></script>
+    <script src="src/components/Chat/input.js"></script>
+    <script src="src/components/Evidence/panel.js"></script>
+    <script src="src/components/Evidence/map.js"></script>
+    <script src="src/components/Evidence/conflict.js"></script>
+    <script src="src/components/Citation/list.js"></script>
+    <script src="src/components/Confidence/gauge.js"></script>
+    <script src="src/components/Verification/status.js"></script>
+    <script src="src/components/Loading/stages.js"></script>
+    <script src="src/components/Sources/modal.js"></script>
+    <script src="src/components/Explainability/why.js"></script>
+    <script src="src/components/Explainability/pipeline.js"></script>
+    <script src="src/components/Explainability/howitworks.js"></script>
+    <script src="src/components/Drawer/evidence-drawer.js"></script>
+    <script src="src/components/Sidebar/sources.js"></script>
+    <script src="src/components/Innovation/trust.js"></script>
+    <script src="src/components/Innovation/contextcheck.js"></script>
+    <script src="src/components/Innovation/strength.js"></script>
+    <script src="src/components/Innovation/receipt.js"></script>
+    <script src="src/components/Innovation/trace.js"></script>
+    <script src="src/components/Innovation/passport.js"></script>
+    <script src="src/components/Innovation/compare.js"></script>
+    <script src="src/components/Innovation/heatmap.js"></script>
+    <script src="src/components/Innovation/demo.js"></script>
+    <script src="src/app.js"></script>
+    <script>
+    window.addEventListener('error', function(e) {
+        console.error("[GLOBAL]", e.message, e.filename, e.lineno);
+    });
+    window.addEventListener('unhandledrejection', function(e) {
+        console.error("[GLOBAL] Unhandled promise rejection:", e.reason);
+        e.preventDefault();
+    });
+    </script>
+</body>
+</html>

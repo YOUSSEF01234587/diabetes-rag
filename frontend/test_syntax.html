@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head><title>Syntax Test</title></head>
+<body>
+<div id="result">Testing...</div>
+<script src="src/utils/helpers.js"></script>
+<script>
+try {
+    var result = document.getElementById('result');
+    if (window.helpers && typeof window.helpers.hasTableContent === 'function') {
+        result.textContent = 'PASS: helpers.js loaded, hasTableContent works: ' + window.helpers.hasTableContent('a | b | c');
+    } else {
+        result.textContent = 'FAIL: helpers or hasTableContent not defined';
+    }
+} catch(e) {
+    document.getElementById('result').textContent = 'ERROR: ' + e.message;
+}
+</script>
+</body>
+</html>
